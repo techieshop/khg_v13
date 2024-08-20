@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rsw_tc_sale_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-15 11:02+0000\n"
+"PO-Revision-Date: 2023-03-15 11:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "<strong>Daily Delivery List</strong>"
+msgstr "<strong>每日柯打表</strong>"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.sold_product_report_wizard_form_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Customer"
+msgstr "客戶"
+
+#. module: rsw_tc_sale_reports
+#: model:ir.ui.menu,name:rsw_tc_sale_reports.menu_sale_sold_product_report
+msgid "Daily Delivery List"
+msgstr "每日柯打表"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.sold_product_report_wizard_form_view
+msgid "Date"
+msgstr "日期"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Delivered Qty"
+msgstr "件數"
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard__delivery_date
+msgid "Delivery Date"
+msgstr "出貨日期"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Delivery Date:"
+msgstr "出貨日期:"
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_report_rsw_tc_sale_reports_report_sold_saleorder__display_name
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard__display_name
+msgid "Display Name"
+msgstr "名字"
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_report_rsw_tc_sale_reports_report_sold_saleorder__id
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_report_rsw_tc_sale_reports_report_sold_saleorder____last_update
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model.fields,field_description:rsw_tc_sale_reports.field_sold_product_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Location"
+msgstr "貨倉"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Lot"
+msgstr "Lot No."
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "NO product Quantity Sold."
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: code:addons/rsw_tc_sale_reports/models/sale_order.py:0
+#, python-format
+msgid "No Product Delivered on this Day."
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: code:addons/rsw_tc_sale_reports/wizard/sold_product_report_wizard.py:0
+#, python-format
+msgid "Please Select Valid Date"
+msgstr "請選擇日期"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.sold_product_report_wizard_form_view
+msgid "Print"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model:ir.actions.act_window,name:rsw_tc_sale_reports.sold_product_report_wizard_action
+msgid "Print sold product Report Based on Date"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Product"
+msgstr "貨品"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Reporting Date:"
+msgstr "打印日期"
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model,name:rsw_tc_sale_reports.model_sold_product_report_wizard
+msgid "Sold Qty wizard."
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model:ir.actions.report,name:rsw_tc_sale_reports.action_report_sold_saleorder
+msgid "Sold Report / Order"
+msgstr ""
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Sr.No"
+msgstr "No"
+
+#. module: rsw_tc_sale_reports
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale_reports.report_sold_saleorder_document
+msgid "Unit Price"
+msgstr "單數"
+
+#. module: rsw_tc_sale_reports
+#: model:ir.model,name:rsw_tc_sale_reports.model_report_rsw_tc_sale_reports_report_sold_saleorder
+msgid "report.rsw_tc_sale_reports.report_sold_saleorder"
+msgstr ""

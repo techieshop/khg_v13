@@ -1,0 +1,589 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* shipment_management_bs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-17 10:46+0000\n"
+"PO-Revision-Date: 2022-11-17 10:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_stock_picking__approved_shipments_ids
+msgid "Approved Shipments"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_shipment_form
+msgid "Cancel"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields.selection,name:shipment_management_bs.selection__purchase_order_shipment__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__company_id
+msgid "Company"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields.selection,name:shipment_management_bs.selection__purchase_order_shipment__state__confirm
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_shipment_form
+msgid "Confirm"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Confirmed"
+msgstr "已確認"
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Container"
+msgstr "貨櫃"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__container_no
+msgid "Container #"
+msgstr "貨櫃編號"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__create_uid
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__create_date
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment_line__product_uom
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__date_order
+msgid ""
+"Depicts the date where the Quotation should be validated and converted into "
+"a purchase order."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__display_name
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields.selection,name:shipment_management_bs.selection__purchase_order_shipment__state__draft
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Draft"
+msgstr "草稿"
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_picking_form_inherit_shipping
+msgid ""
+"Enable Show details Operations and Pre-fill Detailed Operations options."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_stock_picking__fetch_done_qty
+msgid "Fetch Qty from Shipments"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_picking_form_inherit_shipping
+msgid "Fetch Quantity Received from Shipment"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Forwarder"
+msgstr "船東"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__forwarder_no
+msgid "Forwarder #"
+msgstr "船東編號"
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Group By"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__id
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__id
+msgid "ID"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__message_needaction
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__message_has_error
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_stock_picking__show_reserved
+msgid ""
+"If this checkbox is ticked, Odoo will automatically pre-fill the detailed "
+"operations with the corresponding products, locations and lot/serial "
+"numbers."
+msgstr "若勾選，Odoo 將自動用相應的產品、位置和批次/序號預填充詳細操作。"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_stock_picking__show_details
+msgid ""
+"If this checkbox is ticked, the pickings lines will represent detailed stock"
+" operations. If not, the picking lines will represent an aggregate of "
+"detailed stock operations."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment____last_update
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__write_uid
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__write_date
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Locked/Transfered"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/stock_picking.py:0
+#, python-format
+msgid "No Operation for Stock Move Exists"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__date_approve
+msgid "Order Confirmation Date"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__date_order
+msgid "Order Date"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__shipment_id
+msgid "Order Reference"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/stock_picking.py:0
+#: code:addons/shipment_management_bs/models/stock_picking.py:0
+#, python-format
+msgid "Please Use Detailed Operation in Operation Type"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_stock_picking__show_reserved
+msgid "Pre-fill Detailed Operations"
+msgstr "預填詳細操作"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_shipment_form
+msgid "Products"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__purchase_id
+msgid "Purchase"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model,name:shipment_management_bs.model_purchase_order
+msgid "Purchase Order"
+msgstr "採購訂單"
+
+#. module: shipment_management_bs
+#: model:ir.actions.act_window,name:shipment_management_bs.purchase_order_shipment_action_generic
+#: model:ir.ui.menu,name:shipment_management_bs.menu_purchase_shipment
+msgid "Purchase Order Shipment"
+msgstr "採購船單"
+
+#. module: shipment_management_bs
+#: model:ir.model,name:shipment_management_bs.model_purchase_order_shipment
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_shipment_form
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_shipment_view_tree
+msgid "Purchase Order Shipments"
+msgstr "採購船單"
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/purchase_order.py:0
+#, python-format
+msgid "Purchase Shipments"
+msgstr "採購船期"
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/stock_picking.py:0
+#, python-format
+msgid "Quantity Done can not be fetched in this state"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__qty_received
+msgid "Received Qty"
+msgstr "已拆數量"
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_shipment_view_tree
+msgid "Ref"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__remaining_qty
+msgid "Remaining Shipped Qty"
+msgstr "未交付數量"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__product_qty
+msgid "Requested Qty"
+msgstr "合同數量"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__scheduled_arrival
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Scheduled Arrival"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Search Purchase Shipment"
+msgstr "查詢船期"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order__is_shipment
+msgid "Shipment"
+msgstr "船期"
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/purchase_order_shipments.py:0
+#, python-format
+msgid ""
+"Shipment Already Contains Lines Values. Please remove lines and select "
+"Purchase Order again "
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order__shipments_count
+msgid "Shipment Count"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__shipment_date
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_purchase_order_shipment_filter
+msgid "Shipment Date"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__shipment_lines
+msgid "Shipment Lines"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_shipment_form
+msgid "Shipment Order Lines"
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/purchase_order_shipments.py:0
+#, python-format
+msgid ""
+"Shipment Qty Cannot be greater than Remaining Qty .\n"
+" Product [%s]"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__name
+msgid "Shipment Reference"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_stock_picking__shipments_ids
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.purchase_order_inherit_shipment
+msgid "Shipments"
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/purchase_order.py:0
+#, python-format
+msgid "Shipments Co Exists"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order__shipments_lines
+msgid "Shipments Lines"
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/stock_picking.py:0
+#, python-format
+msgid "Shipments field is empty. Please add Shipments and then try again."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__shipment_qty_received
+msgid "Shipped Qty"
+msgstr "已付運數量"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_stock_picking__show_details
+msgid "Show Detailed Operations"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_stock_picking__show_shipments
+msgid "Show Shipments"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__state
+msgid "State"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model_terms:ir.ui.view,arch_db:shipment_management_bs.view_picking_form_inherit_shipping
+msgid ""
+"This Operation will reset all done quantity and fetch quantity received from"
+" Shipment Selected."
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/purchase_order.py:0
+#, python-format
+msgid "This Purchase Already Order Contains Shipments Records"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model,name:shipment_management_bs.model_stock_picking
+msgid "Transfer"
+msgstr "轉倉"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields.selection,name:shipment_management_bs.selection__purchase_order_shipment__state__done
+msgid "Transfered"
+msgstr "已轉倉"
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment_line__product_uom
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,field_description:shipment_management_bs.field_purchase_order_shipment__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model.fields,help:shipment_management_bs.field_purchase_order_shipment__partner_id
+msgid "You can find a vendor by its Name, TIN, Email or Internal Reference."
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/purchase_order_shipments.py:0
+#, python-format
+msgid "You cannot confirm shipment if Shipped qty is 0"
+msgstr ""
+
+#. module: shipment_management_bs
+#: code:addons/shipment_management_bs/models/purchase_order_shipments.py:0
+#, python-format
+msgid "You cannot delete a Shipment once confirmed"
+msgstr ""
+
+#. module: shipment_management_bs
+#: model:ir.model,name:shipment_management_bs.model_purchase_order_shipment_line
+msgid "purchase.order.shipment.line"
+msgstr ""

@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+
+    <record id="account_move_inherit" model="ir.ui.view">
+      <field name="name">account.move.inherit</field>
+      <field name="model">account.move</field>
+      <field name="inherit_id" ref="account.view_move_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='ref']" position="after">
+            <field name="journal_number" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+            <field name="voucher_number" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+            <field name="remarks" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+        </xpath>
+        <xpath expr="//field[@name='journal_id']" position="after">
+            <field name="status" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+            <field name="journal_type" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+            <field name="description" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+            <field name="ar_type" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+            <field name="invoice_number" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+        </xpath>
+          <xpath expr="//field[@name='to_check']" position="after">
+              <field name="created_by" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+          </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

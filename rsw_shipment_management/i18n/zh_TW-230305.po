@@ -1,0 +1,741 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rsw_shipment_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-04 02:00+0000\n"
+"PO-Revision-Date: 2023-03-04 02:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rsw_shipment_management
+#: model:ir.actions.report,print_report_name:rsw_shipment_management.action_shipment_report
+msgid "'Shipment Report - %s' % (object.name)"
+msgstr "拆櫃列表 - %s' % (object.name)"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>B/L # :</strong>"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>Company :</strong>"
+msgstr "<strong>公司 :</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>Container # :</strong>"
+msgstr "<strong>貨櫃 # :</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>Forwarder # :</strong>"
+msgstr "<strong>船東 # :</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>Order Date :</strong>"
+msgstr "<strong>訂單日期 :</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>Scheduled Arrivial :</strong>"
+msgstr "<strong>預計到港 :</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>Shipment Date :</strong>"
+msgstr "<strong>出發日期 :</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "<strong>Vendor : </strong>"
+msgstr "<strong>供應商 : </strong>"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_needaction
+msgid "Action Needed"
+msgstr "需要採取的行動"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常裝飾"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_stock_picking__approved_shipments_ids
+msgid "Approved Shipments"
+msgstr "確定出貨量"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件計數"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_form
+msgid "B/L No."
+msgstr "B/L號碼"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__bl_no
+msgid "Bl No"
+msgstr "B/L號碼"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields.selection,name:rsw_shipment_management.selection__purchase_order_shipment__state__cancel
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields.selection,name:rsw_shipment_management.selection__purchase_order_shipment__state__confirm
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_form
+msgid "Confirm"
+msgstr "確認"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Confirmed"
+msgstr "已確認"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Container"
+msgstr "貨櫃"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__container_no
+msgid "Container #"
+msgstr "貨櫃編號"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__create_uid
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__create_uid
+msgid "Created by"
+msgstr "創建人"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__create_date
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__create_date
+msgid "Created on"
+msgstr "創建於"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment_line__product_uom
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__date_order
+msgid ""
+"Depicts the date where the Quotation should be validated and converted into "
+"a purchase order."
+msgstr "描述應驗證報價單並將其轉換為採購訂單的日期。"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__display_name
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields.selection,name:rsw_shipment_management.selection__purchase_order_shipment__state__draft
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Draft"
+msgstr "草稿"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_picking_form_inherit_shipping
+msgid ""
+"Enable Show details Operations and Pre-fill Detailed Operations options."
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_stock_picking__fetch_done_qty
+msgid "Fetch Qty from Shipments"
+msgstr "從發貨中獲取數量"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_picking_form_inherit_shipping
+msgid "Fetch Quantity Received from Shipment"
+msgstr "已獲取數量"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_follower_ids
+msgid "Followers"
+msgstr "關注者"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "關注者（頻道)"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "關注者（合作夥伴）"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Forwarder"
+msgstr "船東"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__forwarder_no
+msgid "Forwarder #"
+msgstr "貨代編號"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Group By"
+msgstr "分組"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__id
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__id
+msgid "ID"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_exception_icon
+msgid "Icon"
+msgstr "圖標"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "表示異常活動的圖標。"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__message_needaction
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "如果勾選，新訊息需要您注意。"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__message_has_error
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾選，則某些訊息會出現傳遞錯誤。"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_stock_picking__show_reserved
+msgid ""
+"If this checkbox is ticked, Odoo will automatically pre-fill the detailed "
+"operations with the corresponding products, locations and lot/serial "
+"numbers."
+msgstr "若勾選，Odoo 將自動用相應的產品、位置和批次/序號預填充詳細操作。"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_stock_picking__show_details
+msgid ""
+"If this checkbox is ticked, the pickings lines will represent detailed stock"
+" operations. If not, the picking lines will represent an aggregate of "
+"detailed stock operations."
+msgstr "如果勾選此框，揀貨行將表示詳細的庫存操作。否則，揀選行將代表詳細庫存操作的集合。"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_is_follower
+msgid "Is Follower"
+msgstr "是關注者"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order__lc_no
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_inherit_shipment
+msgid "L/C No."
+msgstr "L/C號碼"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment____last_update
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line____last_update
+msgid "Last Modified on"
+msgstr "最後修改於"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__write_uid
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__write_date
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Locked/Transfered"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "主要附件"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_has_error
+msgid "Message Delivery error"
+msgstr "消息傳遞錯誤"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_ids
+msgid "Messages"
+msgstr "訊息"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一個活動截止日期"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一個活動摘要"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一個活動型態"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/stock_picking.py:0
+#, python-format
+msgid "No Operation for Stock Move Exists"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "Not Shipped Qty"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_needaction_counter
+msgid "Number of Actions"
+msgstr "動作次數"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤次數"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要操作的訊息數"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "發送錯誤的訊息數"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未讀訊息數"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__date_approve
+msgid "Order Confirmation Date"
+msgstr "訂單確認日期"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__date_order
+msgid "Order Date"
+msgstr "訂單日期"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__shipment_id
+msgid "Order Reference"
+msgstr "訂單參考標號"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "Ordered Qty"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__partner_id
+msgid "Partner"
+msgstr "夥伴"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/stock_picking.py:0
+#: code:addons/rsw_shipment_management/models/stock_picking.py:0
+#, python-format
+msgid "Please Use Detailed Operation in Operation Type"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_stock_picking__show_reserved
+msgid "Pre-fill Detailed Operations"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__product_id
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "Product"
+msgstr "產品"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_form
+msgid "Products"
+msgstr "產品"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__purchase_id
+msgid "Purchase"
+msgstr "採購"
+
+#. module: rsw_shipment_management
+#: model:ir.model,name:rsw_shipment_management.model_purchase_order
+msgid "Purchase Order"
+msgstr "採購訂單"
+
+#. module: rsw_shipment_management
+#: model:ir.actions.act_window,name:rsw_shipment_management.purchase_order_shipment_action_generic
+#: model:ir.ui.menu,name:rsw_shipment_management.menu_purchase_shipment
+#: model:ir.ui.menu,name:rsw_shipment_management.menu_purchase_shipment_tc_sale
+msgid "Purchase Order Shipment"
+msgstr "採購船期表\n"
+
+#. module: rsw_shipment_management
+#: model:ir.model,name:rsw_shipment_management.model_purchase_order_shipment
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_form
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_view_tree
+msgid "Purchase Order Shipments"
+msgstr "採購船期表\n"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/purchase_order.py:0
+#, python-format
+msgid "Purchase Shipments"
+msgstr "採購船期"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/stock_picking.py:0
+#, python-format
+msgid "Quantity Done can not be fetched in this state"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__qty_received
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "Received Qty"
+msgstr "已接收數量"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_view_tree
+msgid "Ref"
+msgstr "參考"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__remaining_qty
+msgid "Remaining Shipped Qty"
+msgstr "未送交數量"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__product_qty
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__shipment_qty_receivd
+msgid "Requested Qty"
+msgstr "合同數量"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__activity_user_id
+msgid "Responsible User"
+msgstr "負責同事"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "訊息發送錯誤"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__scheduled_arrival
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Scheduled Arrival"
+msgstr "如期抵達"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Search Purchase Shipment"
+msgstr "搜尋來櫃\n"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order__is_shipment
+msgid "Shipment"
+msgstr "船期"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/purchase_order_shipments.py:0
+#, python-format
+msgid ""
+"Shipment Already Contains Lines Values. Please remove lines and select "
+"Purchase Order again "
+msgstr "貨件已包含行值。請刪除行並再次選擇採購訂單"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order__shipments_count
+msgid "Shipment Count"
+msgstr "出貨量"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__shipment_date
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_purchase_order_shipment_filter
+msgid "Shipment Date"
+msgstr "出貨日期"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__shipment_lines
+msgid "Shipment Lines"
+msgstr "航綫"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_shipment_form
+msgid "Shipment Order Lines"
+msgstr "付運清單"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/purchase_order_shipments.py:0
+#, python-format
+msgid ""
+"Shipment Qty Cannot be greater than Remaining Qty .\n"
+" Product [%s]"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__name
+msgid "Shipment Reference"
+msgstr "貨件參考"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "Shipment Summary Report :"
+msgstr "來櫃總結"
+
+#. module: rsw_shipment_management
+#: model:ir.actions.report,name:rsw_shipment_management.action_shipment_report
+msgid "Shipment report"
+msgstr "來櫃報告"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_stock_picking__shipments_ids
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.purchase_order_inherit_shipment
+msgid "Shipments"
+msgstr "出貨量"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/purchase_order.py:0
+#, python-format
+msgid "Shipments Co Exists"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order__shipments_lines
+msgid "Shipments Lines"
+msgstr "航綫"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/stock_picking.py:0
+#, python-format
+msgid "Shipments field is empty. Please add Shipments and then try again."
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__shipment_qty_received
+msgid "Shipped Qty"
+msgstr "已付運數量"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.report_shipment_card
+msgid "Shippped Qty"
+msgstr "已付運數量"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_stock_picking__show_details
+msgid "Show Detailed Operations"
+msgstr "顯示詳細操作"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_stock_picking__show_shipments
+msgid "Show Shipments"
+msgstr "顯示出貨量"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__state
+msgid "State"
+msgstr "狀態"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基於活動的狀態\n"
+"逾期：截止日期已經過期\n"
+"今天：活動日期是今天\n"
+"計劃：未來的活動"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.view_picking_form_inherit_shipping
+msgid ""
+"This Operation will reset all done quantity and fetch quantity received from"
+" Shipment Selected."
+msgstr ""
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/purchase_order.py:0
+#, python-format
+msgid "This Purchase Already Order Contains Shipments Records"
+msgstr "此筆購買訂單包含發貨記錄"
+
+#. module: rsw_shipment_management
+#: model:ir.model,name:rsw_shipment_management.model_stock_picking
+msgid "Transfer"
+msgstr "調撥"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields.selection,name:rsw_shipment_management.selection__purchase_order_shipment__state__done
+msgid "Transfered"
+msgstr "已轉移"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄異常活動的類型。"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment_line__product_uom
+msgid "Unit of Measure"
+msgstr "計價單位"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_unread
+msgid "Unread Messages"
+msgstr "未讀訊息"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未讀訊息計數器"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,field_description:rsw_shipment_management.field_purchase_order_shipment__website_message_ids
+msgid "Website Messages"
+msgstr "網站留言訊息"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__website_message_ids
+msgid "Website communication history"
+msgstr "網站通訊記錄"
+
+#. module: rsw_shipment_management
+#: model:ir.model.fields,help:rsw_shipment_management.field_purchase_order_shipment__partner_id
+msgid "You can find a vendor by its Name, TIN, Email or Internal Reference."
+msgstr "您可以透過名稱、TIN、電子郵件或內部參考來查找供應商。"
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/purchase_order_shipments.py:0
+#, python-format
+msgid "You cannot confirm shipment if Shipped qty is 0"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: code:addons/rsw_shipment_management/models/purchase_order_shipments.py:0
+#, python-format
+msgid "You cannot delete a Shipment once confirmed"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model:ir.model,name:rsw_shipment_management.model_purchase_order_shipment_line
+msgid "purchase.order.shipment.line"
+msgstr "採購.訂單.發貨.行"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid ""
+"<strong style=\"font-size:20px;\">Monthly Shipment Report\n"
+"                                </strong>"
+msgstr "<strong style=\"font-size:20px;\">每月來櫃總結\n"
+"                                </strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>B/L</strong>"
+msgstr ""
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Company</strong>"
+msgstr "<strong>公司</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Container</strong>"
+msgstr "<strong>櫃號</strong>
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Forwarder</strong>"
+msgstr "<strong>船東</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Order Date</strong>"
+msgstr "<strong>訂單日期</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Partner</strong>"
+msgstr "<strong>供應商</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Scheduled Arrivial</strong>"
+msgstr "<strong>預計到港</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Shipment Date</strong>"
+msgstr "<strong>出發日期</strong>"
+
+#. module: rsw_shipment_management
+#: model_terms:ir.ui.view,arch_db:rsw_shipment_management.monthly_shipment_report
+msgid "<strong>Shipment</strong>"
+msgstr "<strong>船期號</strong>"
+
+#. module: rsw_shipment_management
+#: model:ir.actions.report,name:rsw_shipment_management.action_report_shipment_summary
+msgid "Shipment Summary Report"
+msgstr "每月來櫃總結"

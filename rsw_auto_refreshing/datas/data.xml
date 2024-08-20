@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+        <record id="base_auto_refreshing_monitoring_action" model="base.automation">
+            <field name="name">Auto refresh</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="state">code</field>
+            <field name="code" eval="'model.env[\'bus.bus\'].sendone(\'auto_refresh\', model._name)'"/>
+            <field name="trigger">on_create_or_write</field>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="trigger_field_ids" eval="[(6,0,[ref('stock.field_stock_picking__state'), ref('stock.field_stock_picking__origin'), ref('stock.field_stock_picking__scheduled_date')])]"/>
+        </record>
+
+  </data>
+</openerp>

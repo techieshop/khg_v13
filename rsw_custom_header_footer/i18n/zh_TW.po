@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rsw_custom_header_footer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20210331\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-28 11:14+0000\n"
+"PO-Revision-Date: 2023-05-28 11:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rsw_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_standard
+msgid ""
+"<span>\n"
+"                            <strong>Page :</strong>\n"
+"                        </span>\n"
+"                        <span class=\"page\"/>\n"
+"                        to <span class=\"topage\"/>"
+msgstr ""
+"<span>\n"
+"                            <strong>頁數 :</strong>\n"
+"                        </span>\n"
+"                        <span class=\"page\"/>\n"
+"                        至 <span class=\"topage\"/>"
+
+#. module: rsw_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_background
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_boxed
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_clean
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_standard
+msgid ""
+"<span>\n"
+"                            <strong>Printing Date:</strong>\n"
+"                        </span>"
+msgstr ""
+"<span>\n"
+"                            <strong>打印日期 :</strong>\n"
+"                        </span>"
+
+#. module: rsw_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_standard
+msgid ""
+"<span>\n"
+"                            <strong>Serial No:</strong>\n"
+"                        </span>"
+msgstr ""
+"<span>\n"
+"                            <strong>序號 :</strong>\n"
+"                        </span>"
+
+#. module: rsw_custom_header_footer
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_background
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_boxed
+#: model_terms:ir.ui.view,arch_db:rsw_custom_header_footer.rsw_custom_header_footer_clean
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr "???: <span class=\"page\"/> / <span class=\"topage\"/>"

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <!-- FORM VIEW  -->
+
+        <record id="sale_order_view" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="%(rsw_internal_transaction.action_transientmodel_wizard_purchase)d" string="Create Internal Purchase Order" type="action"
+                            groups="rsw_internal_transaction.group_st" class="btn-primary" attrs="{'invisible':[('state','in',['done','cancel'])]}"/>
+                </header>
+                <xpath expr="//div[@class='oe_button_box']" position="inside">
+                    <button name="action_open_purchase_order" type="object"
+                            class="oe_stat_button"
+                            icon="fa-th-list">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value">
+                                <field name="po_count"/>
+                            </span>
+                            <span class="o_stat_text">Purchase</span>
+                            <span class="o_stat_text">Orders</span>
+                        </div>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="created_from_po"/>
+                    <field name="origin_po" attrs="{'invisible':[('created_from_po','=',False)]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_order_tree_rsw_internal_transaction" model="ir.ui.view">
+            <field name="name">sale.order.view.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='commitment_date']" position="after">
+                    <field name="created_from_po" invisible="1" />
+                    <field name="origin_po"  />
+                </xpath>
+            </field>
+        </record>
+        <record id="view_quotation_tree_with_onboarding_rsw_internal_transaction" model="ir.ui.view">
+            <field name="name">sale.order.view.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='commitment_date']" position="after">
+                    <field name="created_from_po" invisible="1"/>
+                    <field name="origin_po" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <!-- Inherit Form View to Modify it -->
+    <record id="rsw_auto_refreshing_view_inherit" model="ir.ui.view">
+        <field name="name">rsw_auto_refreshing_view_inherit</field>
+        <field name="model">ir.actions.act_window</field>
+        <field name="inherit_id" ref="base.view_window_action_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='filters']" position="inside">
+                <field name="auto_search"/>
+            </xpath>
+        </field>
+    </record>
+
+      <record id="rsw_auto_refreshing_monitoring_action" model="ir.actions.act_window">
+          <field name="name">Monitoring Pending Delivery orders</field>
+          <field name="res_model">stock.picking</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="view_mode">tree,kanban,form,calendar</field>
+          <field name="domain">[('state', 'in', ['waiting', 'confirmed']), ('picking_type_code', '=', 'outgoing')]</field>
+          <field name="context">{'contact_display': 'partner_address'}</field>
+          <field name="search_view_id" ref="stock.view_picking_internal_search"/>
+          <field name="auto_search" eval="True"/>
+      </record>
+
+      <menuitem id="waiting_delivery_order" name="Monitoring Pending Delivery orders" parent="stock.menu_stock_warehouse_mgmt" sequence="5" action="rsw_auto_refreshing_monitoring_action"/>
+
+  </data>
+</openerp>

@@ -1,0 +1,746 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* warehouse_report_app
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-07 13:42+0000\n"
+"PO-Revision-Date: 2023-03-07 13:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid ""
+"<strong>\n"
+"                                                Inventory And Stock Location Transfer Report\n"
+"                                            </strong>"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+msgid ""
+"<strong>\n"
+"                                                Inventory And Stock Movement Report\n"
+"                                            </strong>"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+msgid ""
+"<strong>\n"
+"                                                Inventory And Stock Status Report\n"
+"                                            </strong>"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+msgid ""
+"<strong>\n"
+"                                                Stock Aging Movement Report\n"
+"                                            </strong>"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+msgid ""
+"<strong>\n"
+"                                                Stock Aging Movement Report        \n"
+"                                            </strong>"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+msgid ""
+"<strong>\n"
+"                                                Stock Aging Without Movement Report        \n"
+"                                            </strong>"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid ""
+"<strong>\n"
+"                                                Stock Valuation Report\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                庫存總表\n"
+"                                            </strong>"
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid ""
+"<strong>\n"
+"                                                Stock Valuation Report        \n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                庫存總表        \n"
+"                                            </strong>"
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+msgid "Adjust"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Adjustment Stock"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Available Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Cancel"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__product_categ_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__product_categ_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__product_categ_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__product_categ_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__product_categ_ids
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__inventory_stock_valution_report_wizard__filter_type__category
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_movement_report__filter_type__category
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_wout_movement__filter_type__category
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_location_transfer_warehouse_report__filter_type__category
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_status_warehouse_report__filter_type__category
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Category"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Closing Stock"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Code"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__company_id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__company_id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__company_id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__company_id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__company_id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__company_id
+msgid "Company"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Company:"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Cost Price"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__create_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__create_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__create_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__create_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__create_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__create_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__create_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__create_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__create_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__create_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+msgid "Destination"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid "Destination Location"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockagingmovementinfo__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockagingwoutmovementinfo__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stocklocationtransinfo__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockmovementsinfo__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockstatusinfo__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockvalutioninfo__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__display_name
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__date_to
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__date_to
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__date_to
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__date_to
+msgid "End Date"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "End Date:"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__document
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__document
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__document
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__document
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__document
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__document
+msgid "File To Download"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__filter_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__filter_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__filter_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__filter_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__filter_type
+msgid "Filter By"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "From Date"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__report_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__report_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__report_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__report_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__report_type
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__report_type
+msgid "Generate Report Based on"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Here is the Excel Report:"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockagingmovementinfo__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockagingwoutmovementinfo__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stocklocationtransinfo__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockmovementsinfo__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockstatusinfo__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockvalutioninfo__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__id
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__id
+msgid "ID"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+msgid "Incoming Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.ui.menu,name:warehouse_report_app.wizard_stock_aging_warehouse_movement_report
+msgid "Inventory And Stock Aging Movement Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.ui.menu,name:warehouse_report_app.wizard_stock_aging_warehouse_report
+msgid "Inventory And Stock Aging Without Movement Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.actions.act_window,name:warehouse_report_app.action_stock_location_tranfer_warehouse_report
+#: model:ir.actions.report,name:warehouse_report_app.action_report_stock_location_trans
+#: model:ir.model,name:warehouse_report_app.model_report_warehouse_report_app_report_stocklocationtransinfo
+#: model:ir.model,name:warehouse_report_app.model_stock_location_transfer_warehouse_report
+#: model:ir.ui.menu,name:warehouse_report_app.wizard_stock_location_transfer_report
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+msgid "Inventory And Stock Location Transfer Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.actions.act_window,name:warehouse_report_app.action_stock_location_movement_report
+#: model:ir.actions.report,name:warehouse_report_app.action_report_stock_movement
+#: model:ir.model,name:warehouse_report_app.model_report_warehouse_report_app_report_stockmovementsinfo
+#: model:ir.model,name:warehouse_report_app.model_stock_movement_warehouse_report
+#: model:ir.ui.menu,name:warehouse_report_app.wizard_stock_movement_report
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+msgid "Inventory And Stock Movement Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.actions.act_window,name:warehouse_report_app.action_stock_status_warehouse_report
+#: model:ir.actions.report,name:warehouse_report_app.action_report_stock_inventory_status
+#: model:ir.model,name:warehouse_report_app.model_report_warehouse_report_app_report_stockstatusinfo
+#: model:ir.model,name:warehouse_report_app.model_stock_status_warehouse_report
+#: model:ir.ui.menu,name:warehouse_report_app.wizard_stock_status_warehouse_report
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Inventory And Stock Status Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.actions.act_window,name:warehouse_report_app.action_inventory_stock_valution_report
+#: model:ir.actions.report,name:warehouse_report_app.action_report_stock_inventory_valution
+#: model:ir.model,name:warehouse_report_app.model_report_warehouse_report_app_report_stockvalutioninfo
+#: model:ir.ui.menu,name:warehouse_report_app.wizard_inventory_stock_valution_report
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+msgid "Inventory And Stock Valuation Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+msgid "Inventory Date"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.ui.menu,name:warehouse_report_app.menu_inventory_stock_movement
+msgid "Inventory and Stock Movement"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid "Last Adjustment"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockagingmovementinfo____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockagingwoutmovementinfo____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stocklocationtransinfo____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockmovementsinfo____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockstatusinfo____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_report_warehouse_report_app_report_stockvalutioninfo____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report____last_update
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid "Last Purchase"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid "Last Sale"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__write_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__write_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__write_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__write_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__write_uid
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__write_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__write_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__write_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__write_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__write_date
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__location_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__location_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__location_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__location_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__location_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__location_ids
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__inventory_stock_valution_report_wizard__report_type__location
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_movement_report__report_type__location
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_wout_movement__report_type__location
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_location_transfer_warehouse_report__report_type__location
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_movement_warehouse_report__report_type__location
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_status_warehouse_report__report_type__location
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Location"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+msgid "Locations"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Logo"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:res.groups,name:warehouse_report_app.group_warehouse_report
+msgid "Manage Inventory and Stock Movement"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "OR"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Opening Stock"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+msgid "Operation Types"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+msgid "Outgoing Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__period_length
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__period_length
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__period_length
+msgid "Period Length (Days)"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+msgid "Period Length:"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Print Excel"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Print PDF"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__product_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__product_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__product_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__product_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__product_ids
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__inventory_stock_valution_report_wizard__filter_type__product
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_movement_report__filter_type__product
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_wout_movement__filter_type__product
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_location_transfer_warehouse_report__filter_type__product
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_status_warehouse_report__filter_type__product
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Product"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Product Category"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Product Name"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+msgid "Purchase"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__file
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__file
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__file
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__file
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__file
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__file
+msgid "Report File Name"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Report Generated"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+msgid "Return Incoming Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+msgid "Return Outgoing Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+msgid "Return Transfers"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+msgid "Sale"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Sales Price"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Scrap Stock"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+msgid "Source"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid "Source Location"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__date_from
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__date_from
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__date_from
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__date_from
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__date_from
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__date_from
+msgid "Start Date"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Start Date:"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.actions.act_window,name:warehouse_report_app.action_stock_aging_warehouse_movement_report
+#: model:ir.actions.report,name:warehouse_report_app.action_stock_aging_ware_movement
+#: model:ir.model,name:warehouse_report_app.model_report_warehouse_report_app_report_stockagingmovementinfo
+#: model:ir.model,name:warehouse_report_app.model_stock_aging_warehouse_movement_report
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+msgid "Stock Aging Movement Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.actions.act_window,name:warehouse_report_app.action_stock_aging_warehouse_report
+#: model:ir.actions.report,name:warehouse_report_app.action_stock_aging_ware_wout_movement
+#: model:ir.model,name:warehouse_report_app.model_report_warehouse_report_app_report_stockagingwoutmovementinfo
+#: model:ir.model,name:warehouse_report_app.model_stock_aging_warehouse_wout_movement
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+msgid "Stock Aging Without Movement Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Stock Valuation"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model,name:warehouse_report_app.model_inventory_stock_valution_report_wizard
+msgid "Stock Valuation Report"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "To Date"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+msgid "Total Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+msgid "Total Value"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+msgid "Transfers"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid "Transfers Dates"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+msgid "Transfers Location Qty"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+msgid "Value"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model:ir.model.fields,field_description:warehouse_report_app.field_inventory_stock_valution_report_wizard__warehouse_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_movement_report__warehouse_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_aging_warehouse_wout_movement__warehouse_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_location_transfer_warehouse_report__warehouse_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_movement_warehouse_report__warehouse_ids
+#: model:ir.model.fields,field_description:warehouse_report_app.field_stock_status_warehouse_report__warehouse_ids
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__inventory_stock_valution_report_wizard__report_type__warehouse
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_movement_report__report_type__warehouse
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_aging_warehouse_wout_movement__report_type__warehouse
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_location_transfer_warehouse_report__report_type__warehouse
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_movement_warehouse_report__report_type__warehouse
+#: model:ir.model.fields.selection,name:warehouse_report_app.selection__stock_status_warehouse_report__report_type__warehouse
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stocklocationtransinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockmovementsinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockstatusinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockvalutioninfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_inventory_stock_valution_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_aging_warehouse_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_location_transfer_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_movement_report_form
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.view_stock_status_warehouse_report_form
+msgid "Warehouse"
+msgstr ""
+
+#. module: warehouse_report_app
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingmovementinfo
+#: model_terms:ir.ui.view,arch_db:warehouse_report_app.report_stockagingwoutmovementinfo
+msgid "Warehouse/Location"
+msgstr ""

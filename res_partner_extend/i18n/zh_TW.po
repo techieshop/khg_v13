@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* res_partner_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-01 08:09+0000\n"
+"PO-Revision-Date: 2023-05-01 08:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: res_partner_extend
+#: model:ir.model,name:res_partner_extend.model_res_partner
+msgid "Contact"
+msgstr "聯繫人"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group__create_uid
+msgid "Created by"
+msgstr "創立者"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group__create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: res_partner_extend
+#: model:res.groups,name:res_partner_extend.group_customer_sequrity
+msgid "Customer Sequrity"
+msgstr ""
+
+#. module: res_partner_extend
+#: model:ir.model,name:res_partner_extend.model_contact_group
+msgid "Description"
+msgstr "說明"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_res_partner__user_group
+#: model:ir.model.fields,field_description:res_partner_extend.field_res_partner__user_group_ids
+#: model:ir.model.fields,field_description:res_partner_extend.field_res_users__user_group
+#: model:ir.model.fields,field_description:res_partner_extend.field_res_users__user_group_ids
+msgid "Group"
+msgstr "群組"
+
+#. module: res_partner_extend
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_partner__user_group__group_1
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_users__user_group__group_1
+msgid "Group 1"
+msgstr "群組1"
+
+#. module: res_partner_extend
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_partner__user_group__group_2
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_users__user_group__group_2
+msgid "Group 2"
+msgstr "群組2"
+
+#. module: res_partner_extend
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_partner__user_group__group_3
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_users__user_group__group_3
+msgid "Group 3"
+msgstr "群組3"
+
+#. module: res_partner_extend
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_partner__user_group__group_4
+#: model:ir.model.fields.selection,name:res_partner_extend.selection__res_users__user_group__group_4
+msgid "Group 4"
+msgstr "群組4"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group__name
+#: model_terms:ir.ui.view,arch_db:res_partner_extend.contact_group_form_view
+msgid "Group Name"
+msgstr "群組名稱"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group__id
+msgid "ID"
+msgstr ""
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group____last_update
+msgid "Last Modified on"
+msgstr "最後修改於"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: res_partner_extend
+#: model:ir.model.fields,field_description:res_partner_extend.field_contact_group__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: res_partner_extend
+#: model_terms:ir.ui.view,arch_db:res_partner_extend.contact_group_form_view
+#: model_terms:ir.ui.view,arch_db:res_partner_extend.contact_group_tree_view
+msgid "ModelTitle"
+msgstr ""
+
+#. module: res_partner_extend
+#: model_terms:ir.actions.act_window,help:res_partner_extend.contact_group_act_window
+msgid "There is no examples click here to add new ModelTitle."
+msgstr ""
+
+#. module: res_partner_extend
+#: model:ir.actions.act_window,name:res_partner_extend.contact_group_act_window
+#: model:ir.ui.menu,name:res_partner_extend.contact_group_menu
+msgid "User Groups"
+msgstr ""
+
+#. module: res_partner_extend
+#: model:ir.model,name:res_partner_extend.model_res_users
+msgid "Users"
+msgstr "使用者"

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    If you want odoo to restore odoo default qweb header, footer setting then simply uninstall
+    module -->
+
+    <template id="external_layout">
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id">
+                
+            </t>
+        </t>
+        <t t-if="not o" t-set="o" t-value="doc"/>
+
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+
+        <t t-if="company.external_report_layout_id" t-call="{{company.external_report_layout_id.key}}"><t t-raw="0"/></t>
+        <t t-else="else" t-call="web.external_layout_standard"><t t-raw="0"/></t>
+
+    </template>
+
+    <template id="rsw_custom_header_footer_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-att-style, 'report_header_style')]" position="replace">
+            <div t-attf-class="header o_company_#{company.id}_layout"
+                t-att-style="report_header_style">
+                <div class="row">
+                    <div class="col-4 mb4">
+                        <span t-if="company.name" t-field="company.name" />
+                    </div>
+                    <div class="col-8 text-right" name="print_date">
+                        <span>
+                            <strong>Printing Date:</strong>
+                        </span>
+                        <span
+                            t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y')" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'o_standard_footer')]" position="replace">
+            <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+                <div class="row">
+                    <div class="col-4 mb4">
+                        <span>
+                            <strong>Serial No:</strong>
+                        </span>
+                        <span
+                            t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y%m%d%H%M%S')" />
+                    </div>
+                    <div class="col-8 text-right" name="print_date">
+                        <span>
+                            <strong>Page :</strong>
+                        </span>
+                        <span class="page" />
+                        to <span class="topage" />
+
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="rsw_custom_header_footer_background" inherit_id="web.external_layout_background">
+        <xpath expr="//div[contains(@t-att-style, 'report_header_style')]" position="replace">
+            <div t-attf-class="o_company_#{company.id}_layout header"
+                t-att-style="report_header_style">
+                <div class="row">
+                    <div class="col-3 mb4">
+                        <span t-if="company.name" t-field="company.name" />
+                    </div>
+                    <div class="col-9 text-right" name="print_date">
+                        <span>
+                            <strong>Printing Date:</strong>
+                        </span>
+                        <span
+                            t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y')" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'o_background_footer')]" position="replace">
+            <div t-attf-class="o_company_#{company.id}_layout footer o_background_footer">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <div style="margin-top:5px;" t-if="report_type == 'pdf'" class="text-muted">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="rsw_custom_header_footer_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[contains(@t-att-style, 'report_header_style')]" position="replace">
+            <div t-attf-class="header o_company_#{company.id}_layout"
+                t-att-style="report_header_style">
+                <div class="row">
+                    <div class="col-3 mb4">
+                        <span t-if="company.name" t-field="company.name" />
+                    </div>
+                    <div class="col-9 text-right" name="print_date">
+                        <span>
+                            <strong>Printing Date:</strong>
+                        </span>
+                        <span
+                            t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y')" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'o_boxed_footer')]" position="replace">
+            <div t-attf-class="footer o_boxed_footer o_company_#{company.id}_layout">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <div style="margin-top:5px;" t-if="report_type == 'pdf'" class="text-muted">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="rsw_custom_header_footer_clean" inherit_id="web.external_layout_clean">
+        <xpath expr="//div[contains(@t-att-style, 'report_header_style')]" position="replace">
+            <div t-attf-class="header o_company_#{company.id}_layout"
+                t-att-style="report_header_style">
+                <div class="row">
+                    <div class="col-3 mb4">
+                        <span t-if="company.name" t-field="company.name" />
+                    </div>
+                    <div class="col-9 text-right" name="print_date">
+                        <span>
+                            <strong>Printing Date:</strong>
+                        </span>
+                        <span
+                            t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y')" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'o_clean_footer')]" position="replace">
+            <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <div style="margin-top:5px;" t-if="report_type == 'pdf'" class="text-muted">
+                        Page: <span class="page" /> / <span class="topage" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

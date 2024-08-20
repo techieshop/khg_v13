@@ -1,0 +1,3 @@
+.init_web_extend_form {
+  max-width: calc(100% - 25px) !important;
+}

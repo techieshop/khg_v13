@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_financial_inherit" inherit_id="accounting_pdf_reports.report_trialbalance">
+        <xpath expr="//table" position="replace">
+            <table class="table table-sm table-reports">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Account</th>
+                        <th class="text-right">Debit</th>
+                        <th class="text-right">Credit</th>
+                        <th class="text-right">Credit and Debit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding-left:10px;">Fixed Assets (10xx-14xx)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr t-foreach="fixed_assets" t-as="account">
+                        <td style="padding-left:20px;">
+                            <span t-att-style="style" t-esc="account['code']"/>
+                        </td>
+                        <td>
+                            <span style="color: white;" t-esc="'..'"/>
+                            <span t-att-style="style" t-esc="account['name']"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="float(account.get('debit'))-float(account.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Sub Total(Fixed)</td>
+                        <td></td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="fixed_total['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="fixed_total['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="float(fixed_total.get('debit'))-float(fixed_total.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="padding-left:10px;">Current Assets (15xx-19xx)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr t-foreach="current_assets" t-as="account">
+                        <td style="padding-left:20px;">
+                            <span t-att-style="style" t-esc="account['code']"/>
+                        </td>
+                        <td>
+                            <span style="color: white;" t-esc="'..'"/>
+                            <span t-att-style="style" t-esc="account['name']"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="float(account.get('debit'))-float(account.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Sub Total(Current)</td>
+                        <td></td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="current_total['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="current_total['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="float(current_total.get('debit'))-float(current_total.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Sub Total(Current + Fixed)</td>
+                        <td></td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="current_total['debit']+fixed_total['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="current_total['credit'] + fixed_total['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="(current_total['debit']+fixed_total['debit'])-(current_total['credit'] + fixed_total['credit'])"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            <!--                                  t-esc="float(current_total.get('credit'))+float(current_total.get('debit')) +float(fixed_total.get('credit'))+float(fixed_total.get('debit'))"-->
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:10px;">Liability (20xx)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr t-foreach="liability" t-as="account">
+                        <td style="padding-left:20px;">
+                            <span t-att-style="style" t-esc="account['code']"/>
+                        </td>
+                        <td>
+                            <span style="color: white;" t-esc="'..'"/>
+                            <span t-att-style="style" t-esc="account['name']"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="float(account.get('debit'))-float(account.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">Sub Total(Liability)</td>
+                        <td></td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="liability_total['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="liability_total['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="float(liability_total.get('debit'))-float(liability_total.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <!--                    here to add total of assets-->
+                    <tr>
+                        <td class="text-right" style="padding-left:-5px;">Total Assets</td>
+                        <td></td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="float(liability_total['debit']) + float(fixed_total['debit']) + float(current_total['debit'])"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="float(liability_total['credit']) + float(fixed_total['credit']) + float(current_total['credit'])"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="(float(liability_total['debit']) + float(fixed_total['debit']) + float(current_total['debit']))-(float(liability_total['credit']) + float(fixed_total['credit']) + float(current_total['credit']))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <!--                    end it here-->
+                    <tr>
+                        <td style="padding-left:5px;">Stakeholders Equity</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:10px;">Capital (30xx-39xx)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr t-foreach="capital" t-as="account">
+                        <td style="padding-left:20px;">
+                            <span t-att-style="style" t-esc="account['code']"/>
+                        </td>
+                        <td>
+                            <span style="color: white;" t-esc="'..'"/>
+                            <span t-att-style="style" t-esc="account['name']"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="float(account.get('debit'))-float(account.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">SubTotal(StakeHolders Equity)</td>
+                        <td></td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="capital_total['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="capital_total['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="float(capital_total.get('debit'))-float(capital_total.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:10px;">Other Accounts</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr t-foreach="others" t-as="account">
+                        <td style="padding-left:20px;">
+                            <span t-att-style="style" t-esc="account['code']"/>
+                        </td>
+                        <td>
+                            <span style="color: white;" t-esc="'..'"/>
+                            <span t-att-style="style" t-esc="account['name']"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="account['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="float(account.get('debit'))-float(account.get('credit'))"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">All Total</td>
+                        <td></td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="total_all['debit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style" t-esc="total_all['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-att-style="style"
+                                  t-esc="total_all['debit']-total_all['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </xpath>
+    </template>
+
+</odoo>

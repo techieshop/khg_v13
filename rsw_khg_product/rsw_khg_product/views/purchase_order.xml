@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_x_po_cartoon" model="ir.ui.view">
+        <field name="name">purchase.order.line.x_po_cartoon</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                <field name="x_product_standard_weight"/>
+                <field name="x_po_cartoon"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- <record id="view_order_form_x_std_wgt" model="ir.ui.view">
+        <field name="name">purchase.order.line.x_std_wgt</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='name']" position="after">
+                <field name="x_product_standard_weight"/>
+            </xpath>
+        </field>
+    </record> -->
+</odoo>

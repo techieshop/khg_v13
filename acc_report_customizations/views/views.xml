@@ -1,0 +1,629 @@
+<odoo>
+    <!-- customer header -->
+    <template id="custom1_layout">
+        <t t-if="not o" t-set="o" t-value="doc"/>
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <div class="header">
+            <div class="row">
+                <div class="col-3">
+                </div>
+                <div class="col-2 offset-2 text-center">
+                </div>
+                <div class="col-2 offset-3 text-right">
+                </div>
+            </div>
+        </div>
+        <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+          <t t-raw="0"/>
+        </div>
+    </template>
+	<!-- inherit journal audit report -->
+	<template id="accounting_pdf_reports.report_journal">
+		<t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="25"/>
+            <t t-set="data_report_header_spacing" t-value="20"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                    	<h2 style="color:black;" class="text-center">Journals Audit</h2>
+                        <h2 style="color:black;"><t t-esc="o.name"/> Journal</h2>
+
+                        <div class="row mt32">
+                            <div class="col-3">
+                                <strong>Company:</strong>
+                                <p t-esc="o.company_id.name"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Journal:</strong>
+                                <p t-esc="o.name"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Entries Sorted By:</strong>
+                                <p t-if="data['form'].get('sort_selection') != 'l.date'">Journal Entry Number</p>
+                                <p t-if="data['form'].get('sort_selection') == 'l.date'">Date</p>
+                            </div>
+                            <div class="col-3">
+                                <strong>Target Moves:</strong>
+                                <p t-if="data['form']['target_move'] == 'all'">All Entries</p>
+                                <p t-if="data['form']['target_move'] == 'posted'">All Posted Entries</p>
+                            </div>
+                        </div>
+
+                        <table class="table table-sm table-reports">
+                            <thead>
+                                <tr>
+                                    <th>Move</th>
+                                    <th>Date</th>
+                                    <th>Account</th>
+                                    <th>Partner</th>
+                                    <th>Label</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                    <th t-if="data['form']['amount_currency']">Currency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="lines[o.id]" t-as="aml">
+                                    <td><span t-esc="aml.move_id.name != '/' and aml.move_id.name or ('*'+str(aml.move_id.id))"/></td>
+                                    <td><span t-field="aml.date"/></td>
+                                    <td><span t-field="aml.account_id.code"/></td>
+                                    <td><span t-esc="aml.sudo().partner_id and aml.sudo().partner_id.name and aml.sudo().partner_id.name[:23] or ''"/></td>
+                                    <td><span t-esc="aml.name and aml.name[:35]"/></td>
+                                    <td><span t-esc="aml.debit" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></td>
+                                    <td><span t-esc="aml.credit" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></td>
+                                    <td t-if="data['form']['amount_currency'] and aml.amount_currency">
+                                        <span t-esc="aml.amount_currency" t-options="{'widget': 'monetary', 'display_currency': aml.currency_id}"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+                            <div class="col-4 pull-right">
+                                <table>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><span t-esc="sum_debit(data, o)" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></td>
+                                        <td><span t-esc="sum_credit(data, o)" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <table class="table table-sm table-reports">
+                                    <thead>
+                                        <tr><th colspan="3">Tax Declaration</th></tr>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Base Amount</th>
+                                            <th>Tax Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-set="taxes" t-value="get_taxes(data, o)"/>
+                                        <tr t-foreach="taxes" t-as="tax">
+                                            <td><span t-esc="tax.name"/></td>
+                                            <td><span t-esc="taxes[tax]['base_amount']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></td>
+                                            <td><span t-esc="taxes[tax]['tax_amount']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+	</template>
+
+	<!-- inherit partner ledger report -->
+	<template id="accounting_pdf_reports.report_partnerledger">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="5"/>
+            <t t-set="data_report_header_spacing" t-value="9"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+        	<t t-call="acc_report_customizations.custom1_layout">
+                <div class="page">
+                	<t t-foreach="request.env['res.company'].search([('name','=',data['form']['company_id'][1])])" t-as="obj">
+	                	<div class="row">
+			                <div class="col-3 mb4">
+			                    <img t-if="obj.logo" t-att-src="image_data_uri(obj.logo)" style="max-height: 45px;" alt="Logo"/>
+			                </div>
+			                <div class="col-9 text-right" style="margin-top:22px;" t-field="obj.report_header" name="moto"/>
+			            </div>
+			            <div t-if="obj.logo or obj.report_header" class="row zero_min_height">
+			                <div class="col-12">
+			                    <div style="border-bottom: 1px solid black;"/>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-6" name="company_address">
+			                    <div t-field="obj.partner_id"
+			                        t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'
+			                    />
+			                </div>
+	            		</div>
+            		</t>
+                    <h2>Partner Ledger</h2>
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>Company:</strong>
+                            <p t-esc="data['form']['company_id'][1]"/>
+                        </div>
+                        <div class="col-3">
+                            <t t-if="data['form']['date_from']">
+                                <strong>Date from :</strong>
+                                <span t-esc="data['form']['date_from']"/>
+                                <br/>
+                            </t>
+                            <t t-if="data['form']['date_to']">
+                                <strong>Date to :</strong>
+                                <span t-esc="data['form']['date_to']"/>
+                            </t>
+                        </div>
+                        <div class="col-3">
+                            <strong>Target Moves:</strong>
+                            <p t-if="data['form']['target_move'] == 'all'">All Entries</p>
+                            <p t-if="data['form']['target_move'] == 'posted'">All Posted Entries</p>
+                        </div>
+                    </div>
+
+                    <table class="table table-sm table-reports">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>JRNL</th>
+                                <th>Account</th>
+                                <th>Ref</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                                <th>Balance</th>
+                                <th t-if="data['form']['amount_currency']">Currency</th>
+                            </tr>
+                        </thead>
+                        <t t-foreach="docs" t-as="o">
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">
+                                        <strong t-esc="o.ref"/>
+                                        -
+                                        <strong t-esc="o.name"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <strong t-esc="sum_partner(data, o, 'debit')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <strong t-esc="sum_partner(data, o, 'credit')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <strong t-esc="sum_partner(data, o, 'debit - credit')"
+                                                t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                </tr>
+                                <tr t-foreach="lines(data, o)" t-as="line">
+                                    <td>
+                                        <span t-esc="line['date']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['code']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['a_code']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['displayed_name']"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line['debit']"
+                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line['credit']"
+                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line['progress']"
+                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right" t-if="data['form']['amount_currency']">
+                                        <t t-if="line['currency_id']">
+                                            <span t-esc="line['amount_currency']"
+                                                  t-options="{'widget': 'monetary', 'display_currency': line['currency_id']}"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </t>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <!-- inherit general ledger report -->
+    <template id="accounting_pdf_reports.report_general_ledger">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="25"/>
+            <t t-set="data_report_header_spacing" t-value="20"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-foreach="docs" t-as="o">
+	            <t t-call="web.external_layout">
+	                <div class="page">
+	                    <h2 style="color:black;"><span t-esc="o.company_id.name"/>: General ledger</h2>
+
+	                    <div class="row mt32">
+	                        <div class="col-4">
+	                            <strong>Journals:</strong>
+	                              <p t-esc="', '.join([ lt or '' for lt in print_journal ])"/>
+	                        </div>
+	                        <div class="col-4">
+	                            <strong>Display Account</strong>
+	                            <p>
+	                                <span t-if="data['display_account'] == 'all'">All accounts'</span>
+	                                <span t-if="data['display_account'] == 'movement'">With movements</span>
+	                                <span t-if="data['display_account'] == 'not_zero'">With balance not equal to zero</span>
+	                            </p>
+	                        </div>
+	                        <div class="col-4">
+	                            <strong>Target Moves:</strong>
+	                            <p t-if="data['target_move'] == 'all'">All Entries</p>
+	                            <p t-if="data['target_move'] == 'posted'">All Posted Entries</p>
+	                        </div>
+	                    </div>
+	                    <div class="row mb32">
+	                        <div class="col-4">
+	                            <strong>Sorted By:</strong>
+	                            <p t-if="data['sortby'] == 'sort_date'">Date</p>
+	                            <p t-if="data['sortby'] == 'sort_journal_partner'">Journal and Partner</p>
+	                        </div>
+	                        <div class="col-4">
+	                            <t t-if="data['date_from']"><strong>Date from :</strong> <span t-esc="data['date_from']"/><br/></t>
+	                            <t t-if="data['date_to']"><strong>Date to :</strong> <span t-esc="data['date_to']"/></t>
+	                        </div>
+	                    </div>
+
+	                    <table class="table table-sm table-reports">
+	                        <thead>
+	                            <tr class="text-center">
+	                                <th>Date</th>
+	                                <th>JRNL</th>
+	                                <th>Partner</th>
+	                                <th>Ref</th>
+	                                <th>Move</th>
+	                                <th>Entry Label</th>
+	                                <th>Debit</th>
+	                                <th>Credit</th>
+	                                <th>Balance</th>
+	                                <th groups="base.group_multi_currency">Currency</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <t t-foreach="Accounts" t-as="account">
+	                                <tr style="font-weight: bold;">
+	                                    <td colspan="6">
+	                                        <span style="color: white;" t-esc="'..'"/>
+	                                        <span t-esc="account['code']"/>
+	                                        <span t-esc="account['name']"/>
+	                                    </td>
+	                                    <td class="text-right">
+	                                        <span t-esc="account['debit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                    </td>
+	                                    <td class="text-right">
+	                                        <span t-esc="account['credit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                    </td>
+	                                    <td class="text-right">
+	                                        <span t-esc="account['balance']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                    </td>
+	                                    <td groups="base.group_multi_currency"/>
+	                                </tr>
+	                                <tr t-foreach="account['move_lines']" t-as="line">
+	                                    <td><span t-esc="line['ldate']"/></td>
+	                                    <td><span t-esc="line['lcode']"/></td>
+	                                    <td><span t-esc="line['partner_name']"/></td>
+	                                    <td><span t-if="line['lref']" t-esc="line['lref']"/></td>
+	                                    <td><span t-esc="line['move_name']"/></td>
+	                                    <td><span t-esc="line['lname']"/></td>
+	                                    <td class="text-right">
+	                                        <span t-esc="line['debit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                    </td>
+	                                    <td class="text-right">
+	                                        <span t-esc="line['credit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                    </td>
+	                                    <td class="text-right">
+	                                        <span t-esc="line['balance']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                    </td>
+	                                    <td class="text-right" groups="base.group_multi_currency">
+	                                        <span t-esc="line['amount_currency'] if line['amount_currency'] and line['amount_currency'] > 0.00 else ''"/>
+	                                        <span t-esc="line['currency_code'] if line['amount_currency'] and line['amount_currency'] > 0.00 else ''"/>
+	                                    </td>
+	                                </tr>
+	                            </t>
+	                        </tbody>
+	                    </table>
+	                </div>
+	            </t>
+        	</t>
+        </t>
+    </template>
+
+    <!-- inherit trial balance report -->
+    <template id="accounting_pdf_reports.report_trialbalance">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="25"/>
+            <t t-set="data_report_header_spacing" t-value="20"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-foreach="docs" t-as="o">
+	            <t t-call="web.external_layout">
+	                <div class="page">
+	                    <h2 style="color:black;"><span t-esc="o.company_id.name"/>: Trial Balance</h2>
+	                    <div class="row mt32">
+	                        <div class="col-4">
+	                            <strong>Display Account:</strong>
+	                            <p>
+	                                <span t-if="data['display_account'] == 'all'">All accounts</span>
+	                                <span t-if="data['display_account'] == 'movement'">With movements</span>
+	                                <span t-if="data['display_account'] == 'not_zero'">With balance not equal to zero</span>
+	                            </p>
+	                        </div>
+	                        <div class="col-4">
+	                            <p>
+	                                <t t-if="data['date_from']"><strong>Date from :</strong> <span t-esc="data['date_from']"/><br/></t>
+	                                <t t-if="data['date_to']"><strong>Date to :</strong> <span t-esc="data['date_to']"/></t>
+	                            </p>
+	                        </div>
+	                        <div class="col-4">
+	                            <strong>Target Moves:</strong>
+	                            <p>
+	                                <span t-if="data['target_move'] == 'all'">All Entries</span>
+	                                <span t-if="data['target_move'] == 'posted'">All Posted Entries</span>
+	                            </p>
+	                        </div>
+	                    </div>
+
+	                    <table class="table table-sm table-reports">
+	                        <thead>
+	                            <tr>
+	                                <th>Code</th>
+	                                <th>Account</th>
+	                                <th class="text-right">Debit</th>
+	                                <th class="text-right">Credit</th>
+	                                <th class="text-right">Balance</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr t-foreach="Accounts" t-as="account">
+	                                <td>
+	                                    <span t-att-style="style" t-esc="account['code']"/>
+	                                </td>
+	                                <td>
+	                                    <span style="color: white;" t-esc="'..'"/>
+	                                    <span t-att-style="style" t-esc="account['name']"/>
+	                                </td>
+	                                <td class="text-right">
+	                                     <span t-att-style="style" t-esc="account['debit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-att-style="style" t-esc="account['credit']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-att-style="style" t-esc="account['balance']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                </div>
+	            </t>
+        	</t>
+        </t>
+    </template>
+
+    <!-- inherit aged partner report -->
+    <template id="accounting_pdf_reports.report_agedpartnerbalance">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="45"/>
+            <t t-set="data_report_header_spacing" t-value="40"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-foreach="docs" t-as="o">
+	            <t t-call="web.external_layout">
+	                <div class="page">
+	                    <h2 class="text-center" style="color:black;">Aged Partner Balance</h2>
+
+	                    <div class="row mt32">
+	                        <div class="col-3">
+	                            <strong>Start Date:</strong>
+	                            <p t-esc="data['date_from']"/>
+	                        </div>
+	                        <div class="col-3">
+	                            <strong>Period Length (days)</strong>
+	                            <p t-esc="data['period_length']"/>
+	                        </div>
+	                    </div>
+	                    <div class="row mb32">
+	                        <div class="col-3">
+	                            <strong>Partner's:</strong>
+	                            <p>
+	                                <span t-if="data['result_selection'] == 'customer'">Receivable Accounts</span>
+	                                <span t-if="data['result_selection'] == 'supplier'">Payable Accounts</span>
+	                                <span t-if="data['result_selection'] == 'customer_supplier'">Receivable and Payable Accounts</span>
+	                            </p>
+	                        </div>
+	                        <div class="col-3">
+	                            <strong>Target Moves:</strong>
+	                            <p>
+	                                <span t-if="data['target_move'] == 'all'">All Entries</span>
+	                                <span t-if="data['target_move'] == 'posted'">All Posted Entries</span>
+	                            </p>
+	                        </div>
+	                    </div>
+
+	                    <table class="table table-sm table-reports">
+	                        <thead>
+	                            <tr>
+	                                <th>Partners</th>
+	                                <th class="text-right">
+	                                    <span>Not due</span>
+	                                </th>
+	                                <th class="text-right"><span t-esc="data['4']['name']"/></th>
+	                                <th class="text-right"><span t-esc="data['3']['name']"/></th>
+	                                <th class="text-right"><span t-esc="data['2']['name']"/></th>
+	                                <th class="text-right"><span t-esc="data['1']['name']"/></th>
+	                                <th class="text-right"><span t-esc="data['0']['name']"/></th>
+	                                <th class="text-right">Total</th>
+	                            </tr>
+	                            <tr t-if="get_partner_lines">
+	                                <th>Account Total</th>
+	                                <th class="text-right"><span t-esc="get_direction[6]" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></th>
+	                                <th class="text-right"><span t-esc="get_direction[4]" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></th>
+	                                <th class="text-right"><span t-esc="get_direction[3]" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></th>
+	                                <th class="text-right"><span t-esc="get_direction[2]" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></th>
+	                                <th class="text-right"><span t-esc="get_direction[1]" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></th>
+	                                <th class="text-right"><span t-esc="get_direction[0]" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></th>
+	                                <th class="text-right"><span t-esc="get_direction[5]" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/></th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr t-foreach="get_partner_lines" t-as="partner">
+	                                <td>
+	                                    <span t-esc="partner['name']"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-esc="partner['direction']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-esc="partner['4']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-esc="partner['3']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-esc="partner['2']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-esc="partner['1']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-esc="partner['0']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                                <td class="text-right">
+	                                    <span t-esc="partner['total']" t-options="{'widget': 'monetary', 'display_currency': o.company_id.currency_id}"/>
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                </div>
+	            </t>
+	        </t>
+        </t>
+    </template>
+
+    <!-- inherit tax report  -->
+    <template id="accounting_pdf_reports.report_tax">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="5"/>
+            <t t-set="data_report_header_spacing" t-value="9"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-call="acc_report_customizations.custom1_layout">
+                <div class="page">
+                	<t t-foreach="request.env['res.company'].search([('name','=',data['company_id'][1])])" t-as="obj">
+	                	<div class="row">
+			                <div class="col-3 mb4">
+			                    <img t-if="obj.logo" t-att-src="image_data_uri(obj.logo)" style="max-height: 45px;" alt="Logo"/>
+			                </div>
+			                <div class="col-9 text-right" style="margin-top:22px;" t-field="obj.report_header" name="moto"/>
+			            </div>
+			            <div t-if="obj.logo or obj.report_header" class="row zero_min_height">
+			                <div class="col-12">
+			                    <div style="border-bottom: 1px solid black;"/>
+			                </div>
+			            </div>
+			            <div class="row">
+			                <div class="col-6" name="company_address">
+			                    <div t-field="obj.partner_id"
+			                        t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'
+			                    />
+			                </div>
+	            		</div>
+                	</t>
+                    <h3 class="text-center" style="color:black;">Tax Report</h3>
+                    <div class="row">
+                        <div class="col-3">
+                            <strong>Company:</strong>
+                            <p t-esc="data['company_id'][1]"/>
+                        </div>
+                        <div>
+                            <t>
+                                <strong>Date from :</strong>
+                                <span t-esc="data['date_from']"/>
+                            </t>
+                            <br/>
+                            <t>
+                                <strong>Date to :</strong>
+                                <span t-esc="data['date_to']"/>
+                            </t>
+                        </div>
+                    </div>
+                    <table class="table table-sm table-reports">
+                        <thead>
+                            <tr align="left">
+                                <th>Sale</th>
+                                <th>Net</th>
+                                <th>Tax</th>
+                            </tr>
+                        </thead>
+                        <tr align="left" t-foreach="lines['sale']" t-as="line">
+                            <td>
+                                <span t-esc="line.get('name')"/>
+                            </td>
+                            <td>
+                                <span t-att-style="style" t-esc="line.get('net')"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td>
+                                <span t-att-style="style" t-esc="line.get('tax')"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr align="left">
+                            <td>
+                                <strong>Purchase</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr align="left" t-foreach="lines['purchase']" t-as="line">
+                            <td>
+                                <span t-esc="line.get('name')"/>
+                            </td>
+                            <td>
+                                <span t-att-style="style" t-esc="line.get('net')"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td>
+                                <span t-att-style="style" t-esc="line.get('tax')"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

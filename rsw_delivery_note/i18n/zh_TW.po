@@ -1,0 +1,76 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rsw_delivery_note
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-22 10:24+0000\n"
+"PO-Revision-Date: 2022-11-22 10:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid "&amp;nbsp;"
+msgstr ""
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid ""
+"<span>專營</span><br/>\n"
+"                                    <span style=\"text-decoration: overline\">環零</span><br/>\n"
+"                                    <span>球沽</span><br/>\n"
+"                                    <span>凍批</span><br/>\n"
+"                                    <span>肉發</span>"
+msgstr ""
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid "<strong>Grand Total:</strong>"
+msgstr "總價"
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid ""
+"件&amp;nbsp;數<br/>\n"
+"                                                    QTY"
+msgstr "件數"
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid ""
+"單&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;價<br/>\n"
+"                                                    UNIT PRICE"
+msgstr "單價"
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid "寶&amp;nbsp;&amp;nbsp;號"
+msgstr ""
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid ""
+"貨&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;品<br/>\n"
+"                                                    DESCRIPTION"
+msgstr "產品"
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid ""
+"重&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;量<br/>\n"
+"                                                    WEIGHT"
+msgstr "重量"
+
+#. module: rsw_delivery_note
+#: model_terms:ir.ui.view,arch_db:rsw_delivery_note.custom_delivery_report
+msgid ""
+"金&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;額<br/>\n"
+"                                                    AMOUNT"
+msgstr "合共"

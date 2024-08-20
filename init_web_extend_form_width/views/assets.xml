@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="assets_backend" name="init_form_width_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/init_web_extend_form_width/static/src/css/form_view_extra.css"/>
+            <script type="text/javascript" src="/init_web_extend_form_width/static/src/js/form_renderer.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="accounting_pdf_reports_trial_balance_total" inherit_id="accounting_pdf_reports.report_trialbalance">
+        <xpath expr="//tr[@t-foreach='Accounts']" position="after">
+            <td>
+                <span><b>Total</b></span>
+            </td>
+            <td>
+            </td>
+            <td class="text-right">
+                 <span t-att-style="style" t-esc="total_line['total_debit']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+            </td>
+            <td class="text-right">
+                <span t-att-style="style" t-esc="total_line['total_credit']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+            </td>
+            <td class="text-right">
+                <span t-att-style="style" t-esc="total_line['total_balance']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>
+

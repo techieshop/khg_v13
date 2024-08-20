@@ -1,0 +1,31 @@
+<odoo>
+<!--    <record id="ir_cron_auto_post_draft_entry" model="ir.cron">-->
+<!--        <field name="name">Ready To receive messages</field>-->
+<!--        <field name="interval_number">1</field>-->
+<!--        <field name="interval_type">days</field>-->
+<!--        <field name="numbercall">-1</field>-->
+<!--        <field name="nextcall"-->
+<!--               eval="(DateTime.now() + timedelta(minutes=4)).strftime('%Y-%m-%d %H:%M:%S')"/>-->
+<!--        <field name="doall" eval="False"/>-->
+<!--        <field name="model_id" ref="model_r_sms"/>-->
+<!--        <field name="code">model.bind_client()</field>-->
+<!--        <field name="state">code</field>-->
+<!--&lt;!&ndash;         <field name="groups_id" eval="[(4, ref('group_jasminsms_user'))]"/>&ndash;&gt;-->
+<!--        <field name="active" eval="True"/>-->
+<!--    </record>-->
+
+      <record id="ir_cron_change_user_price_list" model="ir.cron">
+        <field name="name">Changing User PriceLIst</field>
+        <field name="interval_number">30</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">1</field>
+        <field name="nextcall"
+               eval="(DateTime.now() + timedelta(days=30)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="doall" eval="False"/>
+        <field name="model_id" ref="model_res_partner"/>
+        <field name="code">model.change_priceLIst()</field>
+        <field name="state">code</field>
+<!--         <field name="groups_id" eval="[(4, ref('group_jasminsms_user'))]"/>-->
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

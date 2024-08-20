@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_pos_order_form" model="ir.ui.view">
+        <field name="name">view.pos.order.form</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <field name="date_order" position="after">
+                <field name="pos_reference" />
+            </field>
+            <xpath expr="//page[@name='extra']/group/group[last()]/field[@name='pos_reference']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

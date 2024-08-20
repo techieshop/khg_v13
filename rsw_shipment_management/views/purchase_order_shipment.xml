@@ -1,0 +1,133 @@
+<odoo>
+    <data>
+        <record id="purchase_order_shipment_form" model="ir.ui.view">
+            <field name="name">Purchase Order Shipment</field>
+            <field name="model">purchase.order.shipment</field>
+            <field name="arch" type="xml">
+                <form string="Purchase Order Shipments">
+                    <header>
+                        <button name="button_confirm" type="object" states='draft' string="Confirm" class="oe_highlight" groups="purchase.group_purchase_manager" />
+                        <button name="button_cancel" type="object" states="confirm" string="Cancel" groups="purchase.group_purchase_manager" />
+                        <field name="state" widget="statusbar" readonly="1" />
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" widget="res_partner_many2one" style="width:50%%" />
+                                <field name="purchase_id" attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1"  style="width:50%%" />
+                                <field name="date_order"  style="width:50%%" />
+                                <field name="date_approve" style="width:50%%"  />
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"  style="width:50%%" />
+                            </group>
+                            <group>
+                                <field name="shipment_date" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="scheduled_arrival" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+
+                                <field name="container_no" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="forwarder_no" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="port_departure" />
+                                <field name="port_arrival" />
+                                <field name="bl_no" string="B/L No."/>
+
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Products">
+                                <field name="shipment_lines" attrs="{'readonly': [('state', '!=', 'draft')]}" widget="section_and_note_one2many" mode="tree">
+
+                                    <tree create="false" string="Shipment Order Lines" editable="bottom">
+                                        <field name="shipment_id" invisible="1" />
+                                        <field name="product_id" readonly='1' force_save="1" width="20%"/>
+                                        <field name="x_sh_product_standard_weight" readonly='1' force_save="1" width="10%" />
+                                        <field name="x_sh_cartoon" readonly='1' force_save="1" width="10%"/>
+                                        <field name="product_qty" readonly='1' force_save="1"  width="10%"/>
+                                        <field name="qty_received" readonly='1' force_save="1" width="10%" />
+                                        <field name="remaining_qty" readonly='1' force_save="1"  width="10%"/>
+                                        <field name="shipment_qty_received" required='1' force_save="1" width="10%" />
+                                        <field name="product_uom" readonly='1' force_save="1" width="15%" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="purchase_order_shipment_view_tree" model="ir.ui.view">
+            <field name="name">purchase.order.shipment.view.tree</field>
+            <field name="model">purchase.order.shipment</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'cancel'" decoration-success="state == 'done'" string="Purchase Order Shipments">
+                    <field name="name" string="Ref" readonly="1" />
+
+                    <field name="purchase_id" />
+                    <field name="company_id" />
+
+                    <field name="partner_id" />
+                    <field name="date_approve" />
+
+
+                    <field name="scheduled_arrival" />
+                    <field name="shipment_date" />
+                    <field name="container_no" />
+                    <field name="forwarder_no" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_purchase_order_shipment_filter" model="ir.ui.view">
+            <field name="name">purchase.order.shipment.search</field>
+            <field name="model">purchase.order.shipment</field>
+            <field name="arch" type="xml">
+                <search string="Search Purchase Shipment">
+                    <field name="name" />
+                    <field name="partner_id" />
+                    <field name="purchase_id" />
+                    <separator />
+                    <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]" />
+                    <filter name="confirm" string="Confirmed" domain="[('state', '=', 'confirm')]" />
+                    <filter name="to_approve" string="Locked/Transfered" domain="[('state', '=', 'done')]" />
+                    <separator />
+                    <group expand="0" string="Group By">
+                        <filter string="Container" name="Container" domain="[]" context="{'group_by': 'container_no'}" />
+                        <filter string="Forwarder" name="Forwarder" domain="[]" context="{'group_by': 'forwarder_no'}" />
+                        <filter string="Shipment Date" name="order_date" domain="[]" context="{'group_by': 'shipment_date'}" />
+                        <filter string="Scheduled Arrival" name="scheduled_arrival" domain="[]" context="{'group_by': 'scheduled_arrival'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="purchase_order_shipment_action_generic" model="ir.actions.act_window">
+            <field name="name">Purchase Order Shipment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">purchase.order.shipment</field>
+            <field name="domain">[]</field>
+            <field name="search_view_id" ref="view_purchase_order_shipment_filter" />
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="purchase_order_shipment_view_tree" />
+        </record>
+
+
+        <menuitem action="purchase_order_shipment_action_generic" id="menu_purchase_shipment" parent="purchase.menu_procurement_management" sequence="100" />
+        <menuitem action="purchase_order_shipment_action_generic" id="menu_purchase_shipment_tc_sale" parent="rsw_khg_core.tc_sales_menu_purchase" sequence="100" />
+
+
+
+    </data>
+</odoo>

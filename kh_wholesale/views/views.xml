@@ -1,0 +1,65 @@
+<odoo>
+
+    <record id="group_allow_kh_wholesales_app" model="res.groups">
+        <field name="name">Allow KH Wholesales App</field>
+        <field name="comment">All for using KH Wholesales App</field>
+    </record>
+
+    <!-- KH Wholesale view -->
+    <record model="ir.ui.view" id="kh_wholesale_form_view">
+        <field name="name">KH Wholesale</field>
+        <field name="model">kh.wholesale</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" invisible="1"></field>
+            </form>   
+        </field>
+    </record>
+
+    <!-- KH Wholesale Action -->
+    <record model="ir.actions.act_window" id="kh_wholesale_form_action">
+        <field name="name">Overview</field>
+        <field name="res_model">kh.wholesale</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                See all Orders here!
+            </p>
+        </field>
+    </record>
+
+    <!-- KH Wholesale Overview Menuitem -->
+    <menuitem name="KH Wholesale" id="kh_wholesale_menu_root" web_icon="kh_wholesale,static/description/icon.png" groups="group_allow_kh_wholesales_app"/>
+    <menuitem name="Overview" id="kh_wholesale_menu_overview" action="kh_wholesale_form_action" parent="kh_wholesale_menu_root"/>
+    <menuitem name="Vendor" id="kh_wholesale_menu_vendor" action="kh_wholesale_form_action" parent="kh_wholesale_menu_overview"/>
+    <menuitem name="Customer" id="kh_wholesale_menu_customer" action="kh_wholesale_form_action" parent="kh_wholesale_menu_overview"/>
+    <menuitem name="Delivery Crew" id="kh_wholesale_menu_delivery_crew" action="kh_wholesale_form_action" parent="kh_wholesale_menu_overview"/>
+    <menuitem name="Contact" id="kh_wholesale_menu_contact" action="kh_wholesale_form_action" parent="kh_wholesale_menu_overview"/>
+    <menuitem name="Product" id="kh_wholesale_menu_product" action="kh_wholesale_form_action" parent="kh_wholesale_menu_overview"/>
+    <menuitem name="Purchase" id="kh_wholesale_menu_purchase" action="kh_wholesale_form_action" parent="kh_wholesale_menu_root"/>
+    <menuitem name="Purchase Order" id="kh_wholesale_menu_purchase_order" action="kh_wholesale_form_action" parent="kh_wholesale_menu_purchase"/>
+    <menuitem name="Shipment Handling" id="kh_wholesale_menu_shipment_handling" action="kh_wholesale_form_action" parent="kh_wholesale_menu_purchase"/>
+    <menuitem name="Warehouse" id="kh_wholesale_menu_warehouse" action="kh_wholesale_form_action" parent="kh_wholesale_menu_root"/>
+    <menuitem name="Stock Arrival" id="kh_wholesale_menu_stock_arrival" action="kh_wholesale_form_action" parent="kh_wholesale_menu_warehouse"/>
+    <menuitem name="Managing Lots" id="kh_wholesale_menu_mananging_lots" action="stock.view_production_lot_form" parent="kh_wholesale_menu_warehouse"/>
+    <menuitem name="Stock Transfer" id="kh_wholesale_menu_stock_transfer" action="kh_wholesale_form_action" parent="kh_wholesale_menu_warehouse"/>
+    <menuitem name="Order" id="kh_wholesale_menu_order" action="kh_wholesale_form_action" parent="kh_wholesale_menu_root"/>
+    <menuitem name="Ordering" id="kh_wholesale_menu_ordering" action="kh_wholesale_form_action" parent="kh_wholesale_menu_order"/>
+    <menuitem name="Sales Invoice" id="kh_wholesale_menu_sales_invoice" action="kh_wholesale_form_action" parent="kh_wholesale_menu_order"/>
+    <menuitem name="Delay/Instant Delivery" id="kh_wholesale_menu_delay_delivery" action="kh_wholesale_form_action" parent="kh_wholesale_menu_order"/>
+    <menuitem name="Return Item" id="kh_wholesale_menu_return_item" action="kh_wholesale_form_action" parent="kh_wholesale_menu_order"/>
+    <menuitem name="Reporting" id="kh_wholesale_menu_reporting" action="kh_wholesale_form_action" parent="kh_wholesale_menu_root"/>
+    <menuitem name="Daily Container Summary" id="kh_wholesale_menu_daily_container_summary" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Container Analysis" id="kh_wholesale_menu_container_analysis" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Cleared Container Report" id="kh_wholesale_menu_cleared_container_report" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Inventory Full List" id="kh_wholesale_menu_container_list" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Daily Inventory Balance" id="kh_wholesale_menu_daily_inventory_balance" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Daily Saleable Inventory Balance" id="kh_wholesale_menu_daily_saleable_inventory_balance" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Daily Delivery Report" id="kh_wholesale_menu_daily_delivery_report" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Inventory Monthly Analysis" id="kh_wholesale_menu_inventory_monthly_analysis" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="Inventory Full List" id="kh_wholesale_menu_container_list" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="List of Order Today" id="kh_wholesale_menu_list_of_order_today" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="List of Delivery Today" id="kh_wholesale_menu_list_of_delivery_today" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="List of Locked Stock Today" id="kh_wholesale_menu_list_of_locked_stock_today" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+    <menuitem name="List of Invoice Today" id="kh_wholesale_menu_list_of_invoice_today" action="kh_wholesale_form_action" parent="kh_wholesale_menu_reporting"/>
+</odoo>

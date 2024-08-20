@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Default tree view for contacts -->
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="stock.product_template_action_product" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="limit">300</field>
+    </record>
+
+    <record id="contacts.action_contacts_view_kanban"
+            model="ir.actions.act_window.view">
+        <field name="sequence" eval="9"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="base.res_partner_kanban_view"/>
+        <field name="act_window_id" ref="contacts.action_contacts"/>
+    </record>
+</odoo>

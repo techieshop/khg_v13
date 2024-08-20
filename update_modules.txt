@@ -1,0 +1,14 @@
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_base_company --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_contact --stop-after-init     
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_delivery_note --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_delivery_report --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_kh_delivery --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_kh_core --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_khg_core --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_khg_product --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_khg_purchase --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_khg_sale --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_tc_sale --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_tc_sale_reports --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_shipment_report --stop-after-init
+(venv36) PS D:\Projects\Odoo\odoo13ce_full\odoo> python odoo-bin -d KHG2022_0716 -u rsw_shipment_management --stop-after-init

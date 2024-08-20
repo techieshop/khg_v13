@@ -1,0 +1,11 @@
+<odoo>
+<record id="action_shipment_report" model="ir.actions.report">
+   <field name="name">Shipment report</field>
+   <field name="model">purchase.order.shipment</field>
+   <field name="report_type">qweb-pdf</field>
+   <field name="report_name">rsw_shipment_management.report_shipment_card</field>
+   <field name="report_file">rsw_shipment_management.report_student_id_card</field>
+   <field name="print_report_name">'Shipment Report - %s' % (object.name)</field>
+   <field name="binding_model_id" ref="model_purchase_order_shipment"/>
+</record>
+   </odoo>

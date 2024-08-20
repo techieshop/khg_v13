@@ -1,0 +1,96 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="rsw_khg_product.list">
+      <field name="name">rsw_khg_product list</field>
+      <field name="model">rsw_khg_product.rsw_khg_product</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+    <!-- <record id="product_model_khg" model="ir.ui.view">
+      <field name="name">KHG Product Definition Customized</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+        <field name="categ_id" position="after">
+            <field name="x_product_khg_grade"/>
+            <field name="x_country_of_origin"/>
+            <field name="x_product_standard_weight"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="product_template_tree_view_khg" model="ir.ui.view">
+      <field name="name">KHG Product Tree Definition Customized</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_tree_view"/>
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+            <field name="x_product_khg_grade"/>
+            <field name="x_country_of_origin"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="product_product_tree_view_khg" model="ir.ui.view">
+      <field name="name">KHG Product Tree Definition Customized</field>
+      <field name="model">product.product</field>
+      <field name="inherit_id" ref="product.product_product_tree_view"/>
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+            <field name="x_product_khg_grade"/>
+            <field name="x_country_of_origin"/>
+        </field>
+      </field>
+    </record> -->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="rsw_khg_product.action_window">
+      <field name="name">rsw_khg_product window</field>
+      <field name="res_model">rsw_khg_product.rsw_khg_product</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="rsw_khg_product.action_server">
+      <field name="name">rsw_khg_product server</field>
+      <field name="model_id" ref="model_rsw_khg_product_rsw_khg_product"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="rsw_khg_product" id="rsw_khg_product.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="rsw_khg_product.menu_1" parent="rsw_khg_product.menu_root"/>
+    <menuitem name="Menu 2" id="rsw_khg_product.menu_2" parent="rsw_khg_product.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="rsw_khg_product.menu_1_list" parent="rsw_khg_product.menu_1"
+              action="rsw_khg_product.action_window"/>
+    <menuitem name="Server to list" id="rsw_khg_product" parent="rsw_khg_product.menu_2"
+              action="rsw_khg_product.action_server"/>
+-->
+  </data>
+</odoo>

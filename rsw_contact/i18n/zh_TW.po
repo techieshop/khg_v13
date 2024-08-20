@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rsw_contact
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-05 03:22+0000\n"
+"PO-Revision-Date: 2022-11-05 03:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rsw_contact
+#: model:ir.model.fields,field_description:rsw_contact.field_res_partner__company
+#: model:ir.model.fields,field_description:rsw_contact.field_res_users__company
+msgid "Company"
+msgstr "公司"
+
+#. module: rsw_contact
+#: model:ir.model,name:rsw_contact.model_res_partner
+msgid "Contact"
+msgstr "聯繫人"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__customer
+msgid "Customer"
+msgstr "客戶"
+
+#. module: rsw_contact
+#: model:ir.model.fields,field_description:rsw_contact.field_res_partner__fax
+#: model:ir.model.fields,field_description:rsw_contact.field_res_users__fax
+msgid "Fax"
+msgstr "傳真"
+
+#. module: rsw_contact
+#: model_terms:ir.ui.view,arch_db:rsw_contact.res_partner
+msgid "Fax..."
+msgstr "傳真"
+
+#. module: rsw_contact
+#: model_terms:ir.ui.view,arch_db:rsw_contact.res_partner
+msgid "Nick Name"
+msgstr "簡稱"
+
+#. module: rsw_contact
+#: model:ir.model.fields,field_description:rsw_contact.field_res_partner__nickname
+#: model:ir.model.fields,field_description:rsw_contact.field_res_users__nickname
+msgid "Nickname"
+msgstr "簡稱"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__partner
+msgid "Partner"
+msgstr "各種業務夥伴"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__sales_agent
+msgid "Sales Agent"
+msgstr "其他類型銷售夥伴"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__sales_intermediary
+msgid "Sales Intermediary"
+msgstr "飛機仔"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__service_provider
+msgid "Service Provider"
+msgstr "工商服務商"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__staff
+msgid "Staff"
+msgstr "内部員工"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__supplier
+msgid "Supplier"
+msgstr "供應商"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__techincal_support
+msgid "Technical Support"
+msgstr "技術支持"
+
+#. module: rsw_contact
+#: model:ir.model.fields.selection,name:rsw_contact.selection__res_partner__newtype__transport_agent
+msgid "Transport Agent"
+msgstr "運輸人"
+
+#. module: rsw_contact
+#: model:ir.model.fields,field_description:rsw_contact.field_res_partner__newtype
+#: model:ir.model.fields,field_description:rsw_contact.field_res_users__newtype
+msgid "Type"
+msgstr "類型"
