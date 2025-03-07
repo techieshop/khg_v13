@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="khg_sale_order_form" model="ir.ui.view">
+        <field name="name">khg_sale_order_form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                 <field name="partners" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="domain">[('id', 'in', partners)]</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <menuitem name="Agent Sales" id="kh_sale_menu_sales_agent" parent="rsw_khg_core.tc_sales_menu_sales" sequence="200" groups="rsw_khg_core.group_kh"/>
+        <menuitem name="KH Ordering" id="kh_order" action="sale.action_orders" parent="kh_sale_menu_sales_agent" sequence="10" />
+    <!-- <menuitem name="KH Ordering" id="kh_order" action="kh_sale_entry" parent="rsw_tc_sale.tc_sales_menu_sales_agent" sequence="10" /> -->
+    <!-- <menuitem name="Ordering" id="tc_sales_menu_Ordering" action="sale.action_orders" parent="tc_sales_menu_sales_agent"/> -->
+        <menuitem name="Sales Invoice" id="tc_sales_menu_SalesInvoice" action="sale.action_orders_to_invoice" parent="kh_sale_menu_sales_agent" sequence="20"/>
+        <menuitem name="Delivery" id="tc_sales_menu_elayInstantDelivery" action="stock.action_picking_tree_all" parent="kh_sale_menu_sales_agent"  sequence="40"/>
+        <menuitem name="Return Item" id="tc_sales_menu_ReturnItem" action="sale.action_orders" parent="kh_sale_menu_sales_agent" sequence="50"/>
+
+</odoo>

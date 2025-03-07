@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="journal_entry_report_view" model="ir.ui.view">
+        <field name="name">Journal entry report</field>
+        <field name="model">account.report.journal.entry</field>
+        <field name="arch" type="xml">
+            <form string="Voucher">
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+                <footer>
+                        <button name="print" string="print" type="object" class="btn-primary"/>
+                    </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_journal_entry_report" model="ir.actions.act_window">
+        <field name="name">Journal entry report</field>
+        <field name="res_model">account.report.journal.entry</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem name="Voucher"
+              id="menu_journal_entry_report" sequence="1"
+              parent="accounting_pdf_reports.menu_finance_legal_statement"
+              action="action_journal_entry_report"/>
+</odoo>

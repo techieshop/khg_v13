@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="tc_sales_stock_picking_view_form" model="ir.ui.view">
+        <field name="name">tc.sales.stock.picking.view.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="restaurant_department" string="Restaurant department" />
+            </xpath>
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="tc_sale_order_line" force_save="1" />
+            </xpath>
+            <xpath expr="//tree/field[@name='product_uom_qty']" position="after">
+                <field name="qty_request" string="Request Qty" force_save="1" invisible="1"/>
+                <field name="qty_remaining" string="Remaining Qty" force_save="1"/>
+            </xpath>
+        </field>
+    </record> 
+</odoo>

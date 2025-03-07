@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_sold_saleorder_document">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <div class="oe_structure" />
+
+                <t t-if="data">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th name="th_description" class="text-center">Sr.No</th>
+                                <th name="th_description" class="text-left">Customer</th>
+                                <th name="th_description" class="text-left">Product</th>
+                                <th name="th_quantity" class="text-center">Delivered Qty</th>
+                                <th name="th_quantity" class="text-center">Unit Price</th>
+                                <th name="th_priceunit" class="text-center">Location</th>
+                                <th name="th_priceunit" class="text-center">Lot</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="sale_tbody">
+                            <t t-set="count" t-value="1" />
+                            <t t-foreach="data" t-as="line">
+                                <tr>
+                                    <td name="td_sr_no" class="text-center">
+                                        <span t-esc="count" />
+                                    </td>
+                                    <td name="td_name" class="text-left">
+                                        <span t-esc="line['customer_name']" />
+                                    </td>
+                                    <td name="td_name" class="text-left">
+                                        <span t-esc="line['product_name']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['qty_delivered']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['unit_price']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['location']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['lot_name']" />
+                                    </td>
+
+                                </tr>
+                                <t t-set="count" t-value="count+1" />
+                            </t>
+                        </tbody>
+                    </table>
+                </t>
+                <t t-else="0">
+                    <div class="text-center">
+                        NO product Quantity Sold.
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <data>
+        <report
+            id="action_report_sold_saleorder"
+            string="Sold Report / Order"
+            model="sale.order"
+            report_type="qweb-pdf"
+            file="sold_product_qty_report.report_sold_saleorder"
+            name="sold_product_qty_report.report_sold_saleorder"
+            print_report_name="(object.state in ('draft', 'sent') and 'Sold - %s' % (object.name)) or 'Order - %s' % (object.name)"
+        />
+    </data>
+
+
+    <template id="report_sold_saleorder">
+        <t t-call="web.html_container">
+            <t t-call="sold_product_qty_report.report_sold_saleorder_document" />
+        </t>
+    </template>
+</odoo>

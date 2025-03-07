@@ -9,6 +9,16 @@ class ResPartner(models.Model):
     tc_picking_ids = fields.Many2many("stock.picking")
     past_sale_line_ids = fields.Char()
 
+    def open_sale(self):
+        return {
+            'view_mode': 'form',
+            'view_id': False,
+            'view_type': 'form',
+            'res_model': 'sale.order',
+            'type': 'ir.actions.act_window',
+            'context': {'default_partner_id': self.id}
+        }
+
     def _compute_sale_line(self):
         for rec in self:
             sale_line_ids = []
@@ -73,7 +83,7 @@ class ResPartner(models.Model):
         operation_type = self.env['stock.picking.type'].search([('code', '=', 'outgoing')], limit=1)
         return {
             'view_mode': 'form',
-            'view_id': False,
+            'view_id': self.env.ref('rsw_tc_sale.tc_stock_picking_form_view').id,
             'view_type': 'form',
             'res_model': 'stock.picking',
             'type': 'ir.actions.act_window',
@@ -159,3 +169,14 @@ class StockMove(models.Model):
     # def onchange_quantity_done(self):
     #     if self.quantity_done:
     #         self.qty_request = self.quantity_done
+
+
+class SaleOrderLine(models.Model):
+    _inherit = 'sale.order.line'
+
+    qty_remaining = fields.Float(string='Remaining Quantity', compute='_compute_qty_remaining', store=False)
+
+    @api.depends('product_uom_qty', 'qty_delivered')
+    def _compute_qty_remaining(self):
+        for line in self:
+            line.qty_remaining = line.product_uom_qty - line.qty_delivered

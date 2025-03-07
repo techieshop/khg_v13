@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_sold_saleorder_document">
+        <style>
+            .table-bordered {
+            border: 1px solid #000 !important;
+            }
+        </style>
+        <div class="oe_structure" />
+        <t t-if="context.get('type_wizard')=='shipment_handaing_report'">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div>
+                            <h3 class="text-center mb32">
+                                <strong style="font-size:20px;">Shipment Handling Report : <span
+                                        t-field="o.name" />
+                                </strong>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div>
+                                    <strong>From : </strong>
+                                    <p t-field="o.partner_id" />
+                                    <br />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row" id="journal_information">
+                            <div class="col-4">
+                                <div>
+                                    <strong>Vendor : </strong>
+                                    <p t-field="o.partner_id" />
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-left">
+                                    <strong>Company :</strong>
+                                    <p t-field="o.company_id" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-left">
+                                    <strong>B/L # :</strong>
+                                    <p t-field="o.bl_no" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div>
+                                    <strong>Order Date :</strong>
+                                    <p t-field="o.date_order" t-options='{"format": "dd/MM/yyyy"}' />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-left">
+                                    <strong>Shipment Date :</strong>
+                                    <p t-field="o.shipment_date"
+                                        t-options='{"format": "dd/MM/yyyy"}' />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-left">
+                                    <strong>Scheduled Arrivial :</strong>
+                                    <p t-field="o.scheduled_arrival"
+                                        t-options='{"format": "dd/MM/yyyy"}' />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="journal_information">
+                            <div class="col-4">
+                                <div>
+                                    <strong>Forwarder # :</strong>
+                                    <p t-field="o.container_no" />
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-left">
+                                    <strong>Container # :</strong>
+                                    <p t-field="o.container_no" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                            </div>
+                        </div>
+
+                        <table style="border-collapse: collapse;width: 100%;"
+                            class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Ordered Qty</th>
+                                    <th>Shippped Qty</th>
+                                    <th>Received Qty</th>
+                                    <th>Not Shipped Qty</th>
+                                </tr>
+                            </thead>
+                            <tbody class="consumed_tbody">
+                                <t t-foreach="o.shipment_lines" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.product_id.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.product_qty" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.qty_received" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.remaining_qty" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.shipment_qty_received" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </t>
+            </t>
+        </t>
+        <t t-if="context.get('type_wizard')=='sold_product_report'">
+            <t t-call="web.external_layout">
+
+                <div class="page">
+                    <div
+                        style="font-size: 20px;
+                text-align: center;
+                margin: 12p;">
+                        <strong>Daily Delivery List</strong>
+                    </div>
+                    <div style="margin:4px 4px 10px 4px;">
+                        <span>
+                            <strong>Delivery Date: <t t-esc="date" /></strong>
+                        </span>
+                        <span style="float:right;">
+                            <strong>Reporting Date:<span
+                                    t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')" /></strong>
+                        </span>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th name="th_description" class="text-center">Sr.No</th>
+                                <th name="th_description" class="text-left">Customer</th>
+                                <th name="th_description" class="text-left">Product</th>
+                                <th name="th_quantity" class="text-center">Delivered Qty</th>
+                                <th name="th_quantity" class="text-center">Unit Price</th>
+                                <th name="th_priceunit" class="text-center">Location</th>
+                                <th name="th_priceunit" class="text-center">Lot</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="sale_tbody">
+                            <t t-set="count" t-value="1" />
+                            <t t-foreach="data" t-as="line">
+                                <tr>
+                                    <td name="td_sr_no" class="text-center">
+                                        <span t-esc="count" />
+                                    </td>
+                                    <td name="td_name" class="text-left">
+                                        <span t-esc="line['customer_name']" />
+                                    </td>
+                                    <td name="td_name" class="text-left">
+                                        <span t-esc="line['product_name']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['qty_delivered']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['unit_price']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['location']" />
+                                    </td>
+                                    <td name="td_priceunit" class="text-center">
+                                        <span t-esc="line['lot_name']" />
+                                    </td>
+
+                                </tr>
+                                <t t-set="count" t-value="count+1" />
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+
+        </t>
+        <t t-if="context.get('type_wizard')=='monthly_shipment_report'">
+            <t t-call="web.html_container">
+                <t t-foreach="docs[0]" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <div class="oe_structure" />
+                            <div>
+                                <h3 class="text-center mb32">
+                                    <strong style="font-size:20px;">Monthly Shipment Report
+                                    </strong>
+                                </h3>
+                            </div>
+                            <div>
+                                <table style="border-collapse: collapse;width: 100%;"
+                                    class="table table-condensed">
+                                    <tr>
+                                        <td>
+                                            <strong>Shipment</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Partner</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Company</strong>
+                                        </td>
+                                        <td>
+                                            <strong>B/L</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Order Date</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Shipment Date</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Scheduled Arrivial</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Forwarder</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Container</strong>
+                                        </td>
+                                    </tr>
+                                    <tr t-foreach="docs" t-as="l">
+                                        <td>
+                                            <span t-field="l.name" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.partner_id" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.company_id" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.bl_no" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.date_order" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.shipment_date" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.scheduled_arrival" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.forwarder_no" />
+                                        </td>
+                                        <td>
+                                            <p t-field="l.container_no" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+
+        </t>
+    </template>
+
+    <data>
+        <report
+            id="action_report_sold_saleorder"
+            string="Sold Report / Order"
+            model="sale.order"
+            file="rsw_tc_sale_reports.report_sold_saleorder"
+            name="rsw_tc_sale_reports.report_sold_saleorder"
+            report_type="qweb-pdf"
+        />
+    </data>
+
+
+    <template id="report_sold_saleorder">
+        <t t-call="web.html_container">
+            <t t-call="rsw_tc_sale_reports.report_sold_saleorder_document" />
+        </t>
+    </template>
+</odoo>

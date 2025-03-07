@@ -1,0 +1,528 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rsw_tc_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-17 09:27+0000\n"
+"PO-Revision-Date: 2023-08-17 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "<span class=\"o_stat_text\">Invoiced</span>"
+msgstr "已收款"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_accounting
+msgid "Accounting"
+msgstr "會計"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_sales_agent
+msgid "Agent Sales"
+msgstr "代理銷售"
+
+#. module: rsw_tc_sale
+#: model:res.groups,comment:rsw_tc_sale.group_allow_tc_sales_app
+msgid "All for using TC Sales App"
+msgstr ""
+
+#. module: rsw_tc_sale
+#: model:res.groups,name:rsw_tc_sale.group_allow_tc_sales_app
+msgid "Allow TC Sales App"
+msgstr ""
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "Archived"
+msgstr "封存"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_cleared_container_report
+msgid "Cleared Container Report"
+msgstr "已拆櫃列表"
+
+#. module: rsw_tc_sale
+#: model:ir.model,name:rsw_tc_sale.model_res_partner
+#: model:ir.ui.menu,name:rsw_tc_sale.Contact_menu
+msgid "Contact"
+msgstr "聯繫人"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.actions.act_window,help:rsw_tc_sale.action_quotations_tc_sales
+msgid "Create a new quotation, the first step of a new sale!"
+msgstr "創建一個報價是新銷售的第一步!"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.actions.act_window,help:rsw_tc_sale.action_picking_tree_ready2222
+msgid "Create a new transfer"
+msgstr "創建新轉倉"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department__create_uid
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_tc_sale__create_uid
+msgid "Created by"
+msgstr "製作人"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department__create_date
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_tc_sale__create_date
+msgid "Created on"
+msgstr "製作日期"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.Customer_menu
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_tree_view_sale_line
+msgid "Customer"
+msgstr "客戶"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_monthly_summary_1
+msgid "Customer Monthly Summary"
+msgstr "客戶每月總結"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_daily_delivery_report
+msgid "Daily Delivery Report"
+msgstr "每日出貨報告"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_daily_inventory_balance
+msgid "Daily Inventory Balance"
+msgstr "每日庫存總額"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_daily_saleable_inventory_balance
+msgid "Daily Saleable Inventory Balance"
+msgstr "每日可賣庫存總額"
+
+#. module: rsw_tc_sale
+#: model:ir.model,name:rsw_tc_sale.model_delivery_department
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department__name
+msgid "Deliver to Department"
+msgstr "收貨部門"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_delivery
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_elayInstantDelivery
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "Delivery"
+msgstr "交貨"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.DeliveryCrew_menu
+msgid "Delivery Crew"
+msgstr "車隊"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_partner__delivery_count
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_users__delivery_count
+msgid "Delivery Orders"
+msgstr "代出"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields.selection,name:rsw_tc_sale.selection__delivery_department__name__dimsum
+msgid "Dim Sum"
+msgstr "點"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.view_sale_order_line_tree
+msgid "Disc.%"
+msgstr "折扣%"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department__display_name
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_tc_sale__display_name
+msgid "Display Name"
+msgstr "名稱"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.actions.act_window,help:rsw_tc_sale.tc_sale_dummy_menu_form_action
+msgid "Dummy 2!"
+msgstr ""
+
+#. module: rsw_tc_sale
+#: model:ir.actions.act_window,name:rsw_tc_sale.tc_sale_dummy_menu_form_action
+msgid "Dummy2"
+msgstr ""
+
+#. module: rsw_tc_sale
+#: model:ir.actions.act_window,name:rsw_tc_sale.actions_productss
+msgid "Grouped Products"
+msgstr ""
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields.selection,name:rsw_tc_sale.selection__delivery_department__name__hotpot
+msgid "Hot Pot"
+msgstr "火"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department__id
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_tc_sale__id
+msgid "ID"
+msgstr "編號"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_inventory
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_report_inventory
+msgid "Inventory"
+msgstr "存货"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_container_list
+msgid "Inventory Full List"
+msgstr "庫存總表"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_inventory_monthly_analysis
+msgid "Inventory Monthly Analysis"
+msgstr "每月庫存分析"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_invoice
+msgid "Invoice"
+msgstr "發票"
+
+#. module: rsw_tc_sale
+#: model:ir.actions.act_window,name:rsw_tc_sale.action_move_out_invoice_type2222
+msgid "Invoices"
+msgstr "應收發票"
+
+#. module: rsw_tc_sale
+#: model:ir.actions.act_window,name:rsw_tc_sale.action_move_journal_line22222
+msgid "Journal Entries(2 Month)"
+msgstr ""
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_root
+msgid "KHG Supply"
+msgstr "KHG供應鏈"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department____last_update
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_tc_sale____last_update
+msgid "Last Modified on"
+msgstr "上次修改日期"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department__write_uid
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_tc_sale__write_uid
+msgid "Last Updated by"
+msgstr "上次修改人"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_delivery_department__write_date
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_tc_sale__write_date
+msgid "Last Updated on"
+msgstr "上次修改日期"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_list_of_delivery_today
+msgid "List of Delivery Today"
+msgstr "即日送貨表"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_list_of_invoice_today
+msgid "List of Invoice Today"
+msgstr "即日發票表"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_list_of_locked_stock_today
+msgid "List of Locked Stock Today"
+msgstr "即日留單表"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sale_new_list_of_order_today
+msgid "List of Order Today"
+msgstr "即日柯打表"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_inventory_ManagingLots_menu
+msgid "Managing Lots"
+msgstr "貨倉抄碼"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_manufacturing
+msgid "Manufacturing"
+msgstr "製造"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_monthly_summary
+msgid "Monthly Summary"
+msgstr "月結"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "Name"
+msgstr "名字"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.actions.act_window,help:rsw_tc_sale.action_quotations_tc_sales
+msgid ""
+"Once the quotation is confirmed by the customer, it becomes a sales "
+"order.<br> You will be able to create an invoice and collect the payment."
+msgstr "一旦客戶確認報價，報價單即變為銷售訂單。<br>您可以創建一張收據來進行收款。"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_sales_order
+msgid "Order"
+msgstr "訂單"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "Order Lines"
+msgstr "訂單明細"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_Ordering
+msgid "Ordering"
+msgstr "下單"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_overview
+msgid "Overview"
+msgstr "概覽"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "Partners"
+msgstr "夥伴"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_partner__past_sale_line_ids
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_users__past_sale_line_ids
+msgid "Past Sale Line"
+msgstr "過去訂貨"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_sales_pending_delivery
+msgid "Pending Delivery Statistics"
+msgstr "代出統計"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "Pending Transfer"
+msgstr "代出"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_picking_list
+msgid "Picking List"
+msgstr "執貨清單"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_pricelist
+msgid "Pricelist"
+msgstr "價目表"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_inventory_product
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_product
+msgid "Product"
+msgstr "商品"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_purchase
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_report_purchase
+msgid "Purchase"
+msgstr "采購"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_purchase_order
+msgid "Purchase Order"
+msgstr "采購訂單"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.view_sale_order_line_tree
+msgid "Qty"
+msgstr "數量"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_stock_move__qty_remaining
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_stock_picking__qty_remaining
+msgid "Qty Remaining"
+msgstr "尚余數量"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_stock_move__qty_request
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_stock_picking__qty_request
+msgid "Qty Request"
+msgstr "要求數量"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_quotation
+msgid "Quotation"
+msgstr "報價單"
+
+#. module: rsw_tc_sale
+#: model:ir.actions.act_window,name:rsw_tc_sale.action_quotations_tc_sales
+msgid "Quotations"
+msgstr "報價單"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.tc_sales_stock_picking_view_form
+msgid "Remaining Qty"
+msgstr "剩餘數量"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_report
+msgid "Report"
+msgstr "報表"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.tc_sales_stock_picking_view_form
+msgid "Request Qty"
+msgstr "要求數量"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_stock_picking__restaurant_department
+msgid "Restaurant Department"
+msgstr "食肆部門"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_sales_rest
+msgid "Restaurant Sales"
+msgstr "食肆銷售"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.tc_sales_stock_picking_view_form
+msgid "Restaurant department"
+msgstr "食肆部門"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_ReturnItem
+msgid "Return Item"
+msgstr "退貨"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_instant_delivery
+msgid "Sale Instant Delivery"
+msgstr "即出送貨"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_partner__sale_order_line_ids
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_users__sale_order_line_ids
+msgid "Sale Order Line"
+msgstr "銷售項目"
+
+#. module: rsw_tc_sale
+#: model:ir.actions.act_window,name:rsw_tc_sale.tc_sales_form_action
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_pending_delivery
+msgid "Sale Pending Delivery"
+msgstr "客戶"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_report_sales
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_sales
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.res_partner_form_view_sale_line
+msgid "Sales"
+msgstr "銷售"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_SalesInvoice
+msgid "Sales Invoice"
+msgstr "銷售發票"
+
+#. module: rsw_tc_sale
+#: model:ir.model,name:rsw_tc_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "銷售訂單明細"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.view_sale_order_line_tree
+msgid "Sales Order Lines"
+msgstr "銷售項目"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_sales_stat
+msgid "Sales Statistics"
+msgstr "銷售統計"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_shipping_list
+msgid "Shipping List"
+msgstr "送貨清單"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_inventory_StockArrival_menu
+msgid "Stock Arrival"
+msgstr "來貨"
+
+#. module: rsw_tc_sale
+#: model:ir.model,name:rsw_tc_sale.model_stock_move
+msgid "Stock Move"
+msgstr "庫存移動"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_inventory_StockTransfer_menu
+msgid "Stock Transfer"
+msgstr "轉倉"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.Vendor_menu
+msgid "Supplier"
+msgstr "供應商"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_vendor_bills
+msgid "Supplier Bills"
+msgstr "供應商賬單"
+
+#. module: rsw_tc_sale
+#: model:ir.model,name:rsw_tc_sale.model_tc_sale
+msgid "TC Sales"
+msgstr "KHG供應鏈"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_partner__tc_picking_ids
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_res_users__tc_picking_ids
+msgid "Tc Picking"
+msgstr "KHG執貨"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_stock_picking__tc_sale_order_line
+msgid "Tc Sale Order Line"
+msgstr "訂單"
+
+#. module: rsw_tc_sale
+#: model:ir.model.fields,field_description:rsw_tc_sale.field_sale_order_line__tc_stock_picking_ids
+msgid "Tc Stock Picking"
+msgstr "執貨"
+
+#. module: rsw_tc_sale
+#: model:ir.actions.act_window,name:rsw_tc_sale.action_picking_tree_ready2222
+msgid "To Do"
+msgstr "待辦"
+
+#. module: rsw_tc_sale
+#: model:ir.model,name:rsw_tc_sale.model_stock_picking
+msgid "Transfer"
+msgstr "調撥"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.actions.act_window,help:rsw_tc_sale.action_picking_tree_ready2222
+msgid "Transfers allow you to move products from one location to another."
+msgstr "調撥允許您將產品從一個位置移動到另一個位置。"
+
+#. module: rsw_tc_sale
+#: model_terms:ir.ui.view,arch_db:rsw_tc_sale.view_sale_order_line_tree
+msgid "Unit of Measure"
+msgstr "計價單位"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_voucher
+msgid "Voucher"
+msgstr "傳票"
+
+#. module: rsw_tc_sale
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_inventory_warehouse
+#: model:ir.ui.menu,name:rsw_tc_sale.tc_sales_menu_warehouse
+msgid "Warehouse"
+msgstr "倉庫"

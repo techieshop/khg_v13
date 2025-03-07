@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sold_product_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">sold.product.report.wizard.form</field>
+            <field name="model">sold.product.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group invisible="not context.get('type_wizard') == 'sold_product_report'">
+                        <group>
+                            <field name="delivery_date" string="Date" />
+                        </group>
+                    </group>
+                    <group invisible="context.get('type_wizard') == 'sold_product_report'">
+                        <group>
+                            <field name="start_date" string="Start Date" />
+                        </group>
+                        <group>
+                            <field name="end_date" string="End Date" />
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button string="Print" name="print_product_report" type="object"
+                            class="oe_highlight" />
+                        <button string="Cancel" class="btn btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sold_product_report_wizard_action" model="ir.actions.act_window">
+            <field name="name">Print sold product Report Based on Date</field>
+            <field name="res_model">sold.product.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'type_wizard' : 'sold_product_report'}</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="report_shipment_handling_action" model="ir.actions.act_window">
+            <field name="name">Shipment Handling Report</field>
+            <field name="res_model">sold.product.report.wizard</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'type_wizard' : 'shipment_handaing_report'}</field>
+        </record>
+
+
+        <record id="report_monthly_shipment_action" model="ir.actions.act_window">
+            <field name="name">My Monthly Shipment Report</field>
+            <field name="res_model">sold.product.report.wizard</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'type_wizard' : 'monthly_shipment_report'}</field>
+        </record>
+
+
+        <menuitem id="tc_sale_menu_report_shipment_handling"
+            name="Shipment Handling Report"
+            parent="rsw_tc_sale.tc_sales_menu_report_purchase"
+            sequence="25"
+            action="report_shipment_handling_action" />
+
+
+        <menuitem id="tc_sale_menu_report_monthly_shipment"
+            name="Monthly Shipment Report"
+            parent="rsw_tc_sale.tc_sales_menu_report_purchase"
+            sequence="30"
+            action="report_monthly_shipment_action" />
+
+
+        <menuitem id="menu_sale_sold_product_report"
+            name="Daily Delivery List"
+            parent="rsw_tc_sale.tc_sales_menu_report_sales"
+            sequence="5"
+            action="sold_product_report_wizard_action" />
+
+    </data>
+</odoo>

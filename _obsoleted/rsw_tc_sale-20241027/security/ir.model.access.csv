@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tc_sales,name_tc_sales,model_tc_sale,,1,1,1,1
+access_delivery_department,access.delivery.department,model_delivery_department,,1,1,1,1

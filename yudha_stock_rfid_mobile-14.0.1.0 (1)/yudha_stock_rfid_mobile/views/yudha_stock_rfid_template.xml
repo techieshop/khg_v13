@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Author   => Albertus Restiyanto Pramayudha
+     email    => xabre0010@gmail.com
+     linkedin => https://www.linkedin.com/in/albertus-restiyanto-pramayudha-470261a8/
+     youtube  => https://www.youtube.com/channel/UCCtgLDIfqehJ1R8cohMeTXA
+-->
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend" name="Stock Barcode Mobile Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/yudha_stock_rfid_mobile/static/src/js/yudha_stock_mobile_rfid.js"></script>
+            <link rel="stylesheet" type="text/scss" href="/yudha_stock_rfid_mobile/static/src/scss/yudha_stock_mobile_rfid.scss"/>
+        </xpath>
+    </template>
+<!--    <template id="qunit_suite" name="stock_mobile_barcode_tests" inherit_id="web.qunit_mobile_suite_tests">-->
+<!--        <xpath expr="." position="inside">-->
+<!--            <script type="text/javascript" src="/yudha_stock_rfid_mobile/static/src/tests/stock_mobile_picking_barcode_tests.js"/>-->
+<!--        </xpath>-->
+<!--    </template>-->
+
+</odoo>

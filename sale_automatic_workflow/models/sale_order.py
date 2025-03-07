@@ -14,6 +14,8 @@ class SaleOrder(models.Model):
         comodel_name="sale.workflow.process",
         string="Automatic Workflow",
         ondelete="restrict",
+        default=lambda self: self.env['sale.workflow.process'].search([], limit=1),  # Adjust the search criteria as needed
+
     )
     all_qty_delivered = fields.Boolean(
         compute="_compute_all_qty_delivered",

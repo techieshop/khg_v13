@@ -1,0 +1,55 @@
+<odoo>
+
+    <!-- TC Sales view -->
+    <!-- <record model="ir.ui.view" id="tc_sales_form_view">
+        <field name="name">TC Sales</field>
+        <field name="model">tc.sale</field>
+        <field name="arch" type="xml">
+            <form></form>
+        </field>
+    </record> -->
+
+<!--    adding new actoins to call product.template with ctegory id kaleb-->
+    <record id="action_group_product" model="ir.actions.act_window">
+        <field name="name">Grouped Products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_id" ref="product.product_template_kanban_view" />
+        <field name="view_mode">kanban</field>
+<!--        <field name="search_view_id" ref="sale.sale_order_view_search_inherit_quotation" />-->
+        <field name="context">{'group_by': 'categ_id'}</field>
+    </record>
+    
+    <record id="khg_form_action" model="ir.actions.act_window">
+        <field name="name">Sale Pending Delivery</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('customer_rank','>=',1)]</field>
+        <field name="limit">1000</field>
+    </record>
+
+    <!-- TC Sales Overview Menuitem -->
+    <menuitem name="KHG Supply" id="tc_sales_menu_root" web_icon="tc_sales,static/description/icon.png" />
+    <!-- <menuitem name="KHG Supply" id="tc_sales_menu_root" web_icon="tc_sales,static/description/icon.png" groups="group_allow_tc_sales_app" /> -->
+
+    <menuitem name="Overview" id="tc_sales_menu_overview" action="khg_form_action" parent="tc_sales_menu_root" sequence="10"/>
+    <menuitem name="Supplier" id="Vendor_menu" action="account.res_partner_action_supplier" parent="tc_sales_menu_overview" />
+    <menuitem name="Customer" id="Customer_menu" action="account.res_partner_action_customer" parent="tc_sales_menu_overview" />
+    <menuitem name="Contact" id="Contact_menu" action="contacts.action_contacts" parent="tc_sales_menu_overview" />
+    <menuitem name="Delivery Crew" id="DeliveryCrew_menu" action="khg_form_action" parent="tc_sales_menu_overview" />
+    <menuitem name="Warehouse" id="tc_sales_menu_warehouse" action="stock.action_warehouse_form" parent="tc_sales_menu_overview"/>
+    <menuitem name="Product" id="tc_sales_menu_product" action="action_group_product" parent="tc_sales_menu_overview"/>
+
+    <menuitem name="Purchase" id="tc_sales_menu_purchase" action="khg_form_action" parent="tc_sales_menu_root" sequence="20"/>
+    <menuitem name="Purchase Quotation" id="tc_sales_menu_purchase_quotation" action="purchase.purchase_rfq" parent="tc_sales_menu_purchase" sequence="10"/>
+    <menuitem name="Purchase Order" id="tc_sales_menu_purchase_order" action="purchase.purchase_form_action" parent="tc_sales_menu_purchase" sequence="20"/>
+    <menuitem name="Supplier Bills" id="tc_sales_menu_vendor_bills" action="account.action_move_in_invoice_type" parent="tc_sales_menu_purchase" sequence="30"/>
+    <!-- <menuitem name="Manufacturing" id="tc_sales_menu_manufacturing" action="mrp.mrp_production_action" parent="tc_sales_menu_purchase" sequence="40"/> -->
+    <!-- <menuitem name="Sales" id="tc_sales_menu_sales" action="khg_form_action" parent="tc_sales_menu_root" sequence="40"/> -->
+    <menuitem name="Sales" id="tc_sales_menu_sales" parent="tc_sales_menu_root" sequence="40"/>
+    <menuitem name="Quotation" id="tc_sales_menu_quotation" action="sale.action_quotations_with_onboarding" parent="tc_sales_menu_sales" sequence="30"/>
+    <menuitem name="Order" id="tc_sales_menu_sales_order" action="sale.action_orders" parent="tc_sales_menu_sales" sequence="35"/>
+    <menuitem name="Pricelist" id="tc_sales_menu_pricelist" action="product.product_pricelist_action2" parent="tc_sales_menu_sales" sequence="40" />
+
+</odoo>

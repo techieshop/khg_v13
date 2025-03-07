@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="custom_delivery_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <style type="text/css">
+                    .table {
+                    border-collapse: collapse !important;
+                    }
+                    .d-flex {
+                    display: -ms-flexbox !important;
+                    display: flex !important;
+                    }
+
+                    .table td,
+                    .table th {
+                    background-color: #fff !important;
+                    }
+                    .table-bordered {
+                    border: 1px solid #dee2e6;
+                    }
+                    .table-bordered th,
+                    .table-bordered td {
+                    border: 1px solid #ddd !important;
+                    }
+                    .table {
+                    width: 100%;
+                    max-width: 100%;
+                    margin-bottom: 22px;
+                    }
+                    .table > thead > tr > th,
+                    .table > tbody > tr > th,
+                    .table > tfoot > tr > th,
+                    .table > thead > tr > td,
+                    .table > tbody > tr > td,
+                    .table > tfoot > tr > td {
+                    padding: 8px;
+                    line-height: 1.42857143;
+                    vertical-align: top;
+                    border-top: 1px solid #ddd;
+                    }
+                    .table > thead > tr > th {
+                    vertical-align: bottom;
+                    border-bottom: 2px solid #ddd;
+                    }
+                    .table-bordered {
+                    border: 1px solid #dee2e6;
+                    }
+
+                    .table-bordered th,
+                    .table-bordered td {
+                    border: 1px solid #dee2e6;
+                    }
+
+                    .table-bordered thead th,
+                    .table-bordered thead td {
+                    border-bottom-width: 2px;
+                    }
+                    .text-center {
+                    text-align: center;
+                    }
+                    .text-left {
+                    text-align: left;
+                    }
+                    .table-sm th,
+                    .table-sm td {
+                    padding: 5px !important;
+                    }
+                    .justify-content-end {
+                    -ms-flex-pack: end !important;
+                    justify-content: flex-end !important;
+                    }
+                    .table-borderless th,
+                    .table-borderless td,
+                    .table-borderless tr,
+                    .table-borderless thead th,
+                    .table-borderless tbody + tbody {
+                    border: 0 !important;
+                    border-top: 0 !important;
+                    }
+                    .text-right {
+                    text-align: right !important;
+                    }
+
+
+                </style>
+                <t t-set="o" t-value="o.with_context(lang=lang)"/>
+                <div style="width= 100%; border-top: 0px !important">
+                    <table class="table table-borderless table-sm" style="border-top: 0px !important">
+                        <tr class="text-center" style="border-top: 0px !important">
+                            <td style="border-top: 0px !important width: 20%;">
+                                <div class="col-6">
+                                    <span>專營</span><br/>
+                                    <span style="text-decoration: overline">環零</span><br/>
+                                    <span>球沽</span><br/>
+                                    <span>凍批</span><br/>
+                                    <span>肉發</span>
+                                </div>
+                            </td>
+                            <th style="border-top: 0px !important width: 60%;">
+                                <div class="col-6">
+                                    <span style="font-weight: bold; font-size: 32px !important;" t-field="o.company_id.partner_id.name"/><br/><br/>
+                                    <div  style="font-size: 16px !important; font-weight: normal; font-style: italic">
+                                        <span t-field="o.company_id.partner_id.street"/><span style="margin-left: 3px" t-field="o.company_id.partner_id.city"/><br/>
+                                        <span style="margin-left: 3px" t-field="o.company_id.partner_id.state_id"/><span style="margin-left: 3px" t-field="o.company_id.partner_id.zip"/><span style="margin-left: 3px" t-field="o.company_id.partner_id.country_id"/>
+                                    </div>
+                                </div>
+                            </th>
+                            <td style="border-top: 0px !important width: 20%;">
+                                <div class="col-6">
+                                    <span>專營</span><br/>
+                                    <span style="text-decoration: overline">環零</span><br/>
+                                    <span>球沽</span><br/>
+                                    <span>凍批</span><br/>
+                                    <span>肉發</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="width=100; border-top: 0px !important">
+                    <table class="table table-borderless table-sm" style="border-top: 0px !important">
+                        <tr class="text-center" style="border-top: 0px !important">
+                            <td style="border-top: 0px !important width: 60%;">
+                                <div class="col-6">
+                                    <span>代出單</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="width= 100%">
+                    <table class="table table-borderless stable-sm" style="font-size: 12px !important; border-top: 0px !important">
+<!--                        <tr style="border-top: 0px !important">-->
+<!--                            <th style="width: 30%;"></th>-->
+<!--                            <th style="width: 40%;" class="text-center">Delivery Note</th>-->
+<!--                            <th class="text-center">Delivery N°</th>-->
+<!--                        </tr>-->
+                        <tr style="border-top: 0px !important">
+                            <td style="width: 20%;"></td>
+                            <td style="width: 60%;" class="text-left"><span t-field="o.note"/></td>
+                            <th class="text-center"><span t-field="o.name"/></th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="width= 100%">
+                    <table class="table table-borderless stable-sm" style="font-size: 12px !important;">
+                        <tr>
+                            <th style="width: 40%"><span t-field="o.partner_id"/></th>
+                            <td style="width: 15%">寶&amp;nbsp;&amp;nbsp;號</td>
+                            <th style="width: 20%"><span t-field="o.restaurant_department"/></th>
+                            <th style="width: 25%" class="text-center"><span t-field="o.date_done" t-options='{"widget": "date"}'/></th>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="table table-bordered stable-sm" style="font-size: 12px !important;border-left: 0 !important;border-right: 0 !important;border-bottom: 0 !important;">
+                        <tr class="text-center" style="border-left: 0 !important;border-right: 0 !important;">
+                            <td style="width: 28%; border-left: 0 !important;">貨&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;品<br/>
+                                                    DESCRIPTION</td>
+                            <td style="width: 18%;">件&amp;nbsp;數<br/>
+                                                    QTY</td>
+                            <td style="width: 18%;">重&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;量<br/>
+                                                    WEIGHT</td>
+                            <td style="width: 18%;">單&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;價<br/>
+                                                    UNIT PRICE</td>
+                            <td style="width: 18%; border-right: 0 !important;">金&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;額<br/>
+                                                    AMOUNT</td>
+                        </tr>
+                        <t t-foreach="o.move_ids_without_package" t-as="line">
+                            <tr style="border-left: 0 !important">
+                                <td style="width: 28%; vertical-align: left;border: 0 !important">
+                                    <div style="padding-left:5px;"><p style="vertical-align: top;white-space: pre-wrap;"><span t-field="line.product_id"/></p></div>
+                                </td>
+                                <td style="width: 18%;border: 0 !important"><span t-field="line.quantity_done"/>&amp;nbsp;<span t-field="line.product_uom"/></td>
+                                <td style="width: 18%;border: 0 !important" class="text-center"> ****** </td>
+                                <td style="width: 18%;border: 0 !important" class="text-center"> ****** </td>
+                                <td style="width: 18%;border: 0 !important" class="text-center"> ****** </td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <div class="clearfix">
+                    <div id="total" class="row">
+                        <div class="col-sm-12 ml-auto d-flex justify-content-end">
+                            <div style="width: 64%"></div>
+                            <div style="width:36%; float:right" class="p-1 m-0">
+                                <table class="table table-borderless stable-sm" style="page-break-inside: avoid; font-size: 12px; border-top: 0px !important">
+                                    <tr>
+                                        <td class="text-right"><strong>Grand Total:</strong></td>
+                                        <td class="text-center" style="border-bottom: 1px solid #dee2e6 !important"> ******** </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

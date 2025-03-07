@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_accounting_report_form" model="ir.ui.view">
+        <field name="name">view.accounting.report.form</field>
+        <field name="model">accounting.report</field>
+        <field name="inherit_id" ref="accounting_pdf_reports.accounting_report_view" />
+        <field name="arch" type="xml">
+            <field name="date_from" position="before">
+                <field name="fiscal_year" />
+                <br></br>
+                <field name="fiscal_month_start" />
+                <field name="fiscal_month_end" />
+            </field>
+            <field name="date_from" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </field>
+            <field name="date_to" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </field>
+            <xpath expr="//page[@name='comparison']/group[2]" position="after">
+                <field name="is_pl_report" invisible="1"/>
+                <field name="is_bs_report" invisible="1"/>
+                <field name="is_pl_invalid_comparison" invisible="1"/>
+                <b style="color:red;" attrs="{'invisible': [('is_pl_invalid_comparison', '=', False)]}">
+                    If the fiscal date starts at 01/04, the comparison column will be all zero.
+                </b>
+            </xpath>
+            <field name="date_from_cmp" position="attributes">
+                <attribute name="attrs">{'required':[('filter_cmp', '=', 'filter_date')], 'invisible': [('is_pl_invalid_comparison', '=', True)]}</attribute>
+            </field>
+            <field name="date_to_cmp" position="attributes">
+                <attribute name="attrs">{'required':[('filter_cmp', '=', 'filter_date')], 'invisible': [('is_pl_invalid_comparison', '=', True)]}</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

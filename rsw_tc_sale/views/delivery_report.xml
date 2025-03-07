@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--    <record id="model_account_move_action_share" model="ir.actions.server">-->
+    <!--            <field name="name">Delivery report</field>-->
+    <!--            <field name="model_id" ref="base.model_res_partner"/>-->
+    <!--            <field name="binding_model_id" ref="base.model_res_partner"/>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.print_delivery_report()</field>-->
+    <!--    </record>-->
+
+    <report
+            id="delivery_report"
+            model="res.partner"
+            string="Delivery Report"
+            report_type="qweb-pdf"
+            name="rsw_tc_sale.report_delivery"
+            file="rsw_tc_sale.report_delivery"
+    />
+
+    <!-- <template id="delivery_report_data" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[@name='company_address']" position="after">
+            <div class="text-right" style="width: 49%;">
+                <strong>Printing Date: </strong>
+                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y')"/>
+            </div>
+        </xpath>
+    </template> -->
+
+    <template id="report_delivery">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+<!--                        <br/>-->
+<!--                        <br/>-->
+                        <div class="oe_structure"/>
+                        <div>
+                            <h3 class="text-center mb32">
+                                <strong style="font-size:20px;">Delivery Summary Report</strong>
+                            </h3>
+                        </div>
+
+                        <div class="row" id="journal_information">
+                            <div class="col-4">
+                                <div>
+                                    <strong>Partner :</strong>
+                                    <span t-field="o.name"/>
+<!--                                    <br/>-->
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-left">
+                                    <strong>Company :</strong>
+                                    <span t-field="o.company_id"/>
+                                </div>
+                            </div>
+                            <div class="col-4">
+
+                            </div>
+                        </div>
+                        <br></br>
+                        <table style="border-collapse: collapse;width: 100%;" class="table table-condensed">
+                            <thead>
+                                <tr>
+<!--                                    <th>Order</th>-->
+                                    <th>Product</th>
+                                    <th>Product Qty</th>
+                                    <th>Delivered Qty</th>
+                                    <th>Invoiced Qty</th>
+                                    <th>Qty to Invoice</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody class="consumed_tbody">
+                                <t t-set="data" t-value="o.get_sale_order_line()"/>
+                                <t t-foreach="data" t-as="rec">
+                                    <t t-set="line" t-value="data.get(rec)"/>
+                                    <tr>
+<!--                                        <td>-->
+<!--                                            <span t-field="line.order_id.name"/>-->
+<!--                                        </td>-->
+                                        <td>
+                                            <t t-esc="rec"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="line.get('product_uom_qty')"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="line.get('qty_delivered')"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="line.get('qty_invoiced')"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="line.get('qty_to_invoice')"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="line.get('price_subtotal')"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr class="o_total">
+                                    <td/><td/><td/><td/>
+                                    <td class="text-right">Total :</td>
+                                    <td class="text-right">
+                                        <t t-esc="sum(l.price_subtotal for l in o.sale_order_line_ids) "/>
+                                    </td>
+                                    <td/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

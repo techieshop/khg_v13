@@ -21,7 +21,7 @@
     </record>
     
     <record id="khg_form_action" model="ir.actions.act_window">
-        <field name="name">Sale Pending Delivery</field>
+        <field name="name">KHG Supply Chain System</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">kanban,tree,form</field>
@@ -30,8 +30,7 @@
     </record>
 
     <!-- TC Sales Overview Menuitem -->
-    <menuitem name="KHG Supply" id="tc_sales_menu_root" web_icon="tc_sales,static/description/icon.png" />
-    <!-- <menuitem name="KHG Supply" id="tc_sales_menu_root" web_icon="tc_sales,static/description/icon.png" groups="group_allow_tc_sales_app" /> -->
+    <menuitem name="KHG Supply" id="tc_sales_menu_root" web_icon="tc_sales,static/description/icon.png" action="khg_form_action"/>
 
     <menuitem name="Overview" id="tc_sales_menu_overview" action="khg_form_action" parent="tc_sales_menu_root" sequence="10"/>
     <menuitem name="Supplier" id="Vendor_menu" action="account.res_partner_action_supplier" parent="tc_sales_menu_overview" />

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="action_compute_print_report" model="ir.actions.server">
+            <field name="name">Compute Price from BoM</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="state">code</field>
+            <field name="code">
+                _print_report()
+            </field>
+        </record>
+       <menuitem name="Partner Ledger"
+              id="menu_journal_item" sequence="6"
+              parent="base_accounting_kit.account_reports_partner"
+              action="action_compute_print_report"/>
+    </data>
+</odoo>

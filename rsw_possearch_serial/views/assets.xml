@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_backend" name="pos_search_serial_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script src="/rsw_possearch_serial/static/src/js/pos_search_by_serial.js"></script>
+        </xpath>
+    </template>
+</odoo>

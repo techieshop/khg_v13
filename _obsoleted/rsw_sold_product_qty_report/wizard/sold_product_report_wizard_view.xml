@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sold_product_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">sold.product.report.wizard.form</field>
+            <field name="model">sold.product.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="delivery_date" string="Date" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Print" name="print_product_report" type="object"
+                            class="oe_highlight" />
+                        <button string="Cancel" class="btn btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sold_product_report_wizard_action" model="ir.actions.act_window">
+            <field name="name">Print sold product Report Based on Date</field>
+            <field name="res_model">sold.product.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem id="menu_sale_sold_product_report"
+            name="Delivery Report"
+            parent="sale.menu_sale_report"
+            sequence="5"
+            action="sold_product_report_wizard_action" />
+    </data>
+</odoo>

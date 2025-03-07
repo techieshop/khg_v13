@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_header_custom" inherit_id="web.internal_layout">
+        <xpath expr="//div[@class='header']/div/div/span" position="replace">
+            <!-- <div class ="header">
+                <div class="col-xs-4 text-left"> -->
+                  <span style="font-size: 12px;">Date of Print :
+                      <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                      <!--
+                      <span t-esc="time.strftime('%Y-%m-%d %H:%M')"/>
+                      -->
+                  </span>
+                <!-- </div>
+                <div class="col-xs-4 text-right" style="margin-top:-25px;">
+                    <span class="page"/> / <span class="topage"/>
+                </div>
+            </div> -->
+        </xpath>
+    </template>
+    <template id="report_financial_inherit" inherit_id="accounting_pdf_reports.report_financial">
+<!--    Add column Total    -->
+        <xpath expr="//table[3]/thead" position="replace">
+            <tr>
+                <th>Name</th>
+                <th class="text-right">This Period</th>
+                <th class="text-right">
+                    <span t-esc="data['label_filter']"/>
+                </th>
+                <th class="text-right">This Year</th>
+            </tr>
+        </xpath>
+        <xpath expr="//table[3]/tbody" position="replace">
+            <tr t-foreach="get_account_lines" t-as="a">
+                <t t-if="a['level'] != 0">
+                    <t t-if="int(a.get('level')) &gt; 3">
+                        <t t-set="style" t-value="'font-weight: normal;'"/>
+                    </t>
+                    <t t-if="not int(a.get('level')) &gt; 3">
+                        <t t-set="style" t-value="'font-weight: bold;'"/>
+                    </t>
+                    <t t-if="int(a.get('level')) == 7">
+                        <t t-set="style" t-value="'border-top: 1px solid;'"/>
+                    </t>
+                    <t t-if="int(a.get('level')) == 8">
+                        <t t-set="style" t-value="'border-top: 1px solid;border-bottom: 3px double;padding: 2px;'"/>
+                    </t>
+                    <t t-set="a['level']" t-value="update_level(a)" />
+                    <t t-else-if=" ">
+                        <td>
+                            <span style="color: white;" t-esc="'..'"/>
+                            <span t-att-style="style" t-esc="a.get('name')"/>
+                        </td>
+                        <!-- Use _display instead-->
+                        <td class="text-right">
+<!--                            <span t-att-style="style" t-esc="a.get('balance')" t-if="not a.get('is_hide_amount')"-->
+<!--                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>-->
+                            <span t-att-style="style" t-esc="format_financial_amount(a.get('balance'))" t-if="not a.get('is_hide_amount')"/>
+                        </td>
+                        <td class="text-right">
+<!--                            <span t-att-style="style" t-esc="a.get('balance_cmp')" t-if="not a.get('is_hide_amount')"-->
+<!--                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>-->
+                            <span t-att-style="style" t-esc="format_financial_amount(a.get('balance_cmp'))" t-if="not a.get('is_hide_amount')"/>
+                        </td>
+                        <td class="text-right">
+<!--                            <span t-att-style="style" t-esc="int(a.get('balance'))+int(a.get('balance_cmp'))" t-if="not a.get('is_hide_amount')"-->
+<!--                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>-->
+                            <span t-att-style="style" t-esc="format_financial_amount(a.get('balance')+a.get('balance_cmp'))" t-if="not a.get('is_hide_amount')"/>
+                        </td>
+                    </t>
+                </t>
+                <t t-if="a['type'] == 'blank'">
+                    <td colspan="4"><br/></td>
+                </t>
+            </tr>
+        </xpath>
+        <!--Add style config-->
+        <xpath expr="//table[2]/tbody/tr[@t-foreach='get_account_lines']/t/td[1]" position="before">
+            <t t-if="int(a.get('level')) == 7">
+                <t t-set="style" t-value="'border-top: 1px solid;'"/>
+            </t>
+            <t t-if="int(a.get('level')) == 8">
+                <t t-set="style" t-value="'border-top: 1px solid;border-bottom: 3px double;padding: 2px;'"/>
+            </t>
+            <t t-set="a['level']" t-value="update_level(a)" />
+        </xpath>
+        <!--Add style config-->
+        <xpath expr="//table[1]/tbody/tr[@t-foreach='get_account_lines']/t/td[1]" position="before">
+            <t t-if="int(a.get('level')) == 7">
+                <t t-set="style" t-value="'border-top: 1px solid;'"/>
+            </t>
+            <t t-if="int(a.get('level')) == 8">
+                <t t-set="style" t-value="'border-top: 1px solid;border-bottom: 3px double;padding: 2px;'"/>
+            </t>
+            <t t-set="a['level']" t-value="update_level(a)" />
+        </xpath>
+        <xpath expr="//table[2]/tbody/tr[@t-foreach='get_account_lines']" position="inside">
+            <t t-if="a['type'] == 'blank'">
+                <td colspan="2"><br/></td>
+            </t>
+        </xpath>
+        <xpath expr="//table[1]/tbody/tr[@t-foreach='get_account_lines']" position="inside">
+            <t t-if="a['type'] == 'blank'">
+                <td colspan="4"><br/></td>
+            </t>
+        </xpath>
+        <!--Hide debit amount of heading row-->
+        <xpath expr="//table[1]/tbody/tr[@t-foreach='get_account_lines']/t/td[2]/span" position="attributes">
+            <attribute name="t-if">not a.get('is_hide_amount')</attribute>
+            <attribute name="t-options"></attribute>
+            <attribute name="t-esc">format_financial_amount(a.get('debit'))</attribute>
+        </xpath>
+        <!--Hide credit amount of heading row-->
+        <xpath expr="//table[1]/tbody/tr[@t-foreach='get_account_lines']/t/td[3]/span" position="attributes">
+            <attribute name="t-if">not a.get('is_hide_amount')</attribute>
+            <attribute name="t-options"></attribute>
+            <attribute name="t-esc">format_financial_amount(a.get('credit'))</attribute>
+        </xpath>
+        <!--Hide balance amount of heading row-->
+        <xpath expr="//table[1]/tbody/tr[@t-foreach='get_account_lines']/t/td[4]/span" position="attributes">
+            <attribute name="t-if">not a.get('is_hide_amount')</attribute>
+            <attribute name="t-options"></attribute>
+            <attribute name="t-esc">format_financial_amount(a.get('balance'))</attribute>
+        </xpath>
+        <!--Hide balance amount of heading row-->
+        <xpath expr="//table[2]/tbody/tr[@t-foreach='get_account_lines']/t/td[2]/span" position="attributes">
+            <attribute name="t-if">not a.get('is_hide_amount')</attribute>
+            <attribute name="t-options"></attribute>
+            <attribute name="t-esc">format_financial_amount(a.get('balance'))</attribute>
+        </xpath>
+        <xpath expr="//div[@class='row mt32 mb32']" position="replace">
+            <br></br>
+            <div class="table" style="display:table">
+                <div class="table-row" style="display:table-row">
+                    <div class="table-cell" style="display:table-cell">
+                        <p>
+                            <br></br>
+                            <t t-if="fiscal_year_display">
+                                <strong>Fiscal Year: </strong>
+                                <span t-esc="fiscal_year_display"/>
+                            </t>
+                            <br></br>
+                            <t t-if="data['date_from']">
+                                <strong>Date from :</strong>
+                                <span t-esc="data['date_from']"/>
+                            </t>
+                            <t t-if="data['date_to']">
+                                <strong>Date to :</strong>
+                                <span t-esc="data['date_to']"/>
+                            </t>
+                            <!--
+                            <t t-if="data['fiscal_month_start']">
+                                <strong>Month Start: </strong>
+                                <span t-esc="data['fiscal_month_start']"/>
+                            </t>
+                            <t t-if="data['fiscal_month_end']">
+                                <strong>Month End: </strong>
+                                <span t-esc="data['fiscal_month_end']"/>
+                            </t>
+                            -->
+                        </p>
+                    </div>
+
+                    <!--
+                    <div class="table-cell" style="display:table-cell">
+                        <strong>Target Moves:</strong>
+                        <p>
+                            <span t-if="data['target_move'] == 'all'">All Entries</span>
+                            <span t-if="data['target_move'] == 'posted'">All Posted Entries</span>
+                        </p>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//h2" position="replace">
+            <h2 class="text-center" t-esc="data['account_report_id'][1]"/>
+        </xpath>
+        <!-- Add "End of report"-->
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <p class="text-center col-12">End of report</p>
+        </xpath>
+    </template>
+
+</odoo>

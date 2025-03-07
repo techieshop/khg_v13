@@ -1,4 +1,6 @@
 {
     "git.ignoreLimitWarning": true,
-    "git.enabled": true
+    "git.enabled": true,
+    "python.languageServer": "None",
+    "python.analysis.typeCheckingMode": "standard"
 }

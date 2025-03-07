@@ -1,0 +1,20 @@
+<odoo>
+    <menuitem
+        id="menu_account_type"
+        name="Account Types"
+        parent="account.account_account_menu"
+        sequence="2"
+        action="account.action_account_type_form"
+    />
+
+    <record id="view_account_type_form" model="ir.ui.view">
+        <field name="name">view.account.type.form</field>
+        <field name="model">account.account.type</field>
+        <field name="inherit_id" ref="account.view_account_type_form" />
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field name="internal_group" />
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,67 @@
+<odoo>
+    <record model="ir.ui.view" id="res_partner_kanban_view_order_sale_line_create">
+        <field name="name">res.partner.kanban</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban" default_order="delivery_line_number">
+                <field name="id"/>
+                <field name="color"/>
+                <field name="display_name"/>
+                <field name="title"/>
+                <field name="email"/>
+                <field name="parent_id"/>
+                <field name="is_company"/>
+                <field name="function"/>
+                <field name="phone"/>
+                <field name="street"/>
+                <field name="street2"/>
+                <field name="zip"/>
+                <field name="city"/>
+                <field name="country_id"/>
+                <field name="mobile"/>
+                <field name="state_id"/>
+                <field name="category_id"/>
+                <field name="image_128"/>
+                <field name="type"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban open_sale">
+                            <div>
+                                <group attrs="{'invisible': [('delivery_line_number', '&lt;=', 0)]}">
+                                    <field name="delivery_line_number"/>
+                                    <span>,</span>
+                                </group>
+                                <field name="display_name"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="tc_sales_form_action_2" model="ir.actions.act_window">
+        <field name="name">Sale Instant Delivery</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('customer_rank','>=',1)]</field>
+        <field name="limit">1000</field>
+    </record>
+
+    <record id="action_kanban_sale_lines" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="res_partner_kanban_view_order_sale_line_create"/>
+        <field name="act_window_id" ref="tc_sales_form_action_2"/>
+    </record>
+    <record id="action_tree_sale_lines" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="rsw_tc_sale.res_partner_tree_view_sale_line"/>
+        <field name="act_window_id" ref="tc_sales_form_action_2"/>
+    </record>
+
+    <menuitem name="Sale Instant Delivery" id="rsw_tc_sale.tc_sales_menu_instant_delivery" action="tc_sales_form_action_2"
+              parent="rsw_tc_sale.tc_sales_menu_sales_rest" sequence="20" />
+</odoo>
