@@ -13,14 +13,22 @@
     'website': "http://www.security-warehouse.com",
 
     'category': 'Uncategorized',
-    'version': '13.0.0.20241101',
+    'version': '13.0.0.20250401',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale', 'contacts', 'sale_stock', 'stock', 'account', 'purchase', 'web'],
+    'depends': ['base', 'sale', 'contacts', 'sale_stock', 'stock', 'account','product', 'purchase', 'web'],
 
     # always loaded
     'data': [
-    	"views/assets.xml",
+        # 'security/ir.model.access.csv',
+        # 'views/views.xml',
+        # 'views/templates.xml',
+        "views/sale_order.xml",
+        "views/purchase_order.xml",
+        "views/product.xml",
+        "views/product_js.xml",
+        "views/stock.xml",
+        "views/assets.xml",
         'views/views.xml',
         'security/res_groups.xml',
         'views/picking.xml',
