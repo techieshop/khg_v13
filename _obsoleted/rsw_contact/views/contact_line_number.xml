@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="res_partner" model="ir.ui.view">
+            <field name="name">res.partenr.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="before">
+                    <field name="nickname" placeholder="Nick Name"/>
+                    <field name="newtype" widget="many2many_tags" options="{'no_create_edit': True, 'no_open': True}"/>
+                    <field name="company" widget="many2many_tags"/>
+                </xpath>
+                <field name="website" position="before">
+                    <field name="fax" placeholder="Fax..." widget="phone"/>
+                </field>
+                <xpath expr="//field[@name='child_ids']/form//field[@name='mobile']"
+                    position="after">
+                    <field name="fax" placeholder="Fax..." widget="phone" />
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="before">
+                    <field name="delivery_line_number"/>
+                    <field name="reference_number"/>
+                    <field name="reference_name"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_partner_tree_delivery">
+            <field name="name">res.partner.tree.delivery</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='phone']" position="after">
+                    <field name="delivery_line_number" />
+                </xpath>
+                <!-- <xpath expr="/search/group/filter[@name='group_country']" position="after">
+                    <filter name="newtype" string="Contact Type" domain="[('newtype','=','transport_agent')]"/>
+                </xpath> -->
+            </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

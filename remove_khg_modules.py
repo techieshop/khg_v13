@@ -25,7 +25,7 @@ MODULES_TO_REMOVE = [
     "rsw_auto_refreshing",
     "rsw_custom_header_footer",
     "rsw_custom_row_limit",
-    "rsw_internal_transaction",
+    "rsw_st_purchase",
     "rsw_so_create_product_1",
     "rsw_user_pricelist",
 ]

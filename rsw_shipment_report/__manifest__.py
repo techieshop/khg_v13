@@ -11,7 +11,7 @@
     'version': '13.0.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['rsw_shipment_management','purchase','rsw_internal_transaction'],
+    'depends': ['rsw_shipment_management','purchase','rsw_st_purchase'],
 
     # always loaded
     'data': [

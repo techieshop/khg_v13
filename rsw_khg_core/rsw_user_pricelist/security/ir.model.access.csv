@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_res_user,access.res.user,model_res_user,group_company_contact,1,1,1,1
-access_product_pricelist,access.product.pricelist,model_product_pricelist,group_company_contact,1,1,1,1

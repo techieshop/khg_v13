@@ -32,5 +32,13 @@
         'views/views.xml',
         'security/res_groups.xml',
         'views/picking.xml',
+        'views/contact.xml',
+        'security/security.xml',
+        'report/paper_format.xml',
+        'report/report_templates.xml',
+        'security/ir.model.access.csv',
+        'data/partner_type_data.xml',
+        'views/contact_line_number.xml',
+        'views/partner_type_views.xml',
     ]
 }

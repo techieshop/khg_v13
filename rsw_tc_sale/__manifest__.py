@@ -12,7 +12,9 @@
     'author': "RFID & Security Warehouse",
     'website': "http://www.security-warehouse.com",
     # any module necessary for this one to work correctly
-    'depends': ['rsw_khg_core','base', 'sale', 'stock', 'contacts', 'sale_stock', 'sale_management', 'purchase', 'mrp','accounting_pdf_reports', 'rsw_contact'],  
+    'depends': [
+        'rsw_khg_core','base', 'sale', 'stock', 'contacts', 'sale_stock', 'sale_management', 'purchase', 'mrp','accounting_pdf_reports'
+    ],  
     'web.assets_backend': [        
         'static/src/css/kanban.css',
     ],
